@@ -8,22 +8,38 @@
         height:50px;
         background:#111;
         position:relative;
+        border-bottom: 1px solid #fff;
       }
       header>.gnb{
         position:absolute;
-        top:100%;
+        top:101%;
         width:100%;
-
+        display: none;
       }
       .gnb>li{
         background:#111;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #fff;
+        
       }
 
+      .gnb>li>:hover{
+        background: #fff;
+        color: black;
+      }
+      
+
+
       .gnb>li>a{
+        display: block;
+        padding: 12px 0;
         color:#fff;
         font-size:20px;
         font-weight:bold;
+        transition: 0.4s;
       }
+
       ul{
         list-style:none;
       }
@@ -42,14 +58,15 @@
       }
 
       h2{
-        color:red;
+        text-transform: uppercase;
+        color:rgb(255, 255, 255);
         font-size:30px;
         margin:0;
         float:left;
       }
 
       h2>span{
-       color:yellow;
+       color:rgb(247, 12, 12);
       }
 
       .hamberger{
@@ -57,18 +74,13 @@
         height:30px;
         float:right;
         margin-top:5px;
+        cursor: pointer;
       }
 
-      .hamberger>span{
-        display:block;
-        width:100%;
-        height:2px;
-        background:#fff;
-      }
-
-      .hamberger>span:nth-child(2){
-        margin:12px 0;
-      }
+     .hamberger>.fa{
+        color: white;
+        font-size: 30px;
+     }
 
       section>.center{
         height:auto;
