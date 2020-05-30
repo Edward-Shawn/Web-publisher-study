@@ -8,12 +8,46 @@ header{
     background: rgb(73, 73, 73);
     height: 50px;
     width: 100%;
+    position: relative;
+    border-bottom: 1px solid white;
 }
 
-.center>h2{
-    color: white;
-    float: left;
+header> .menu{
+    position: absolute;
+    width: 100%;
+    top: 101%;
+    list-style: none;
+    display: none;
 }
+
+.menu>li{
+    background: #111;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid white;
+    padding: 15px 0;
+}
+
+.menu>li>a{
+    margin: auto;
+    width: 100px;
+    padding: 10px 0;
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.menu>li a:hover{
+    background: white;
+    color: black;
+}
+
+
+
 
 .center{
     padding-top: 5px;
@@ -21,6 +55,11 @@ header{
     height: 50px;
     margin: auto;
     box-sizing: border-box;
+}
+
+h2{
+    color: white;
+    float: left;
 }
 
 .hamberger{
