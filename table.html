@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table_tag</title>
+
+    <style media="screen">
+        table{
+            width: 300px;
+            height: 200px;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <table border>
+        <tr>
+            <!-- tr 태그는 테이블의 가로 공간 하나를 나타낸다. -->
+            <td rowspan="2">1</td>
+            <!-- td 태그는 셀 한칸의 공간을 나타낸다. -->
+            <th>2</th>
+            <td>3</td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+
+        <tr>
+            <td>6</td>
+            <td colspan="2">7</td>
+        </tr>
+
+    </table>
+
+    <!-- 1.선이 없는 것이 디폴트이다. 따라서 table 태그의 속성으로 border를 지정해야 한다.
+    2. 2중 선이 디폴트이다. 실선으로 하려면 border-collapse 속성을 cllapes로 지정해야 한다. -->
+
+</body>
+</html>
