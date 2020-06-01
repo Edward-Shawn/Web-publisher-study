@@ -1,0 +1,56 @@
+header{
+    width: 100%;
+    height: auto;
+    background: #999;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+}
+
+nav{
+    width: 30%;
+    background: red;
+    position: absolute;
+    right: 0px;
+    bottom: 0;
+}
+
+article{
+    width: 70%;
+    height: auto;
+    background: #888;
+    float: left;
+    text-align: center;
+    padding: 100px 0;
+    position: relative;
+}
+
+section{
+    width: 100%;
+    background: red;
+    bottom: 0;
+    position: absolute;
+}
+
+aside{
+    width: 30%;
+    height: auto;
+    background: #777;
+    float: right;
+    text-align: center;
+    padding: 100px 0;
+}
+
+footer{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 30px 0;
+    background: rgb(142, 186, 212);
+}
+
+.clear:after{
+    clear: both;
+    display: block;
+    content: '';
+}
