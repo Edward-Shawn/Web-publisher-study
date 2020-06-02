@@ -1,66 +1,51 @@
-*{
-    margin: 0;
-    padding: 0;
+p{
+    color: red;
 }
 
-.wrap{
-    width: 70%;
-    height: auto;
-    margin: 30px auto;
-    border: 1px solid red;
-   
+/*  1.태그 선택자: html 태그의 문자열을 그대로 옮기면 된다.  */
+
+.second{
+    background: yellow;
+    color: #000;
 }
 
-
-.wrap>form>p{
-    width: 100%;
-    height: auto;
-    margin: 10px 0;
-    
+.third{
+    background: pink;
 }
 
-.wrap>form>p>label{
-    display: block;
-    width: 29%;
-    height: 40px;
-    background: #111;
-    color: #fff;
-    float: left;
-    text-align: center;
-    padding-top: 10px;
-    box-sizing: border-box;
+/* 2.class 선택자 : html 태그 중 class의 값을 마침표(.)로 표시하여 선택한다. class 선택자의
+값은 중복이 가능하다. */
+
+#center{
+    width: 200px;
+    height: 100px;
+    background: yellow;
 }
 
-.wrap>form>p>input{
-    width: 70%;
-    height: 40px;
-    display: block;
-    float: right;
-    box-sizing: border-box;
-    padding-left: 15px;
+/* 3. id 선택자 : html 태그 중 id 속성의 값을 샵 (#)으로 표시하여 선택함.
+id 선택자의 값은 중복해서 사용하지 않는다. */
+
+/* id는 고유한 태그에 작성하며, css 기능상 반복이 되어도 된다. 하지만 자바스크립트에서는 id를 하나만 접근하게 되며,
+사용에 있어서는 큰 레이아웃 태그에 사용하는 것이 일반적이다. */
+
+div>p>b{
+    color: green;
+} 
+
+div>h1>b{
+    color: red;
 }
 
+/* 이렇게 분류할때는 직계 자식을 써 넣어야함 */
 
 
-.clear:after{
-    display: block;
-    clear: both;
-    content: '';
+.abc>li{
+    color: red;
+}
+.cd>li{
+    color: #000;
 }
 
-.wrap textarea{
-    width: 100%;
-    height: 150px;
-    box-sizing: border-box;
-    padding: 15px;
-    resize: none;
-}
-
-.wrap button{
-    border: 0;
-    background: #111;
-    display: block;
-    float: right;
-    color: #fff;
-    padding: 10px 20px;
-}
+/* 4. 자식요소 선택자 : 직계 자식을 선택하는 것은 부등호 (>)를 사용하며, 직계 자식 이하
+후손을 선택하는 것은 공백을 사용한다. 직계 자식과 후손 선택은 디버깅 창을 통해 중복을 최대한 피하는
+방향으로 이뤄져야 한다. */
