@@ -1,0 +1,172 @@
+5/ 27
+
+ 제이쿼리를 활용한 탭헤드 공부
+
+ul li  전 체
+
+ul>li 특정 부분 지목
+
+
+각 폴더에 파일 생성시. 
+폴더 우클릭/ 해당폴더명 ＼ 파일.css  
+
+
+5/28
+
+https://www.advancedwebranking.com/html/   < html 태그 사용빈도
+
+검색을 통해서 패턴에 익숙해지는게 중요
+
+제이쿼리 
+조건문 패턴 (중요) - if ( 조건 입력 숀=남자){
+			if가 사실이면 이 문장 조건이 실행 
+		  } else {
+			if가 사실이 아니면 이 조건이 실행
+		  } 
+
+예시)
+
+
+    $(".hamberger").click(function(){
+
+        $(this).toggleClass("on");
+        
+        if($(this).hasClass("on")){
+            console.log("true");  -- 콘솔로그를 사용하는 이유는 작동확인용.
+        } else {		     비슷하게 alert을 사용하기도하는데
+            console.log("false");     대부분 콘솔을 선호함.
+        }
+
+    });
+
+
+ $(".hamberger").click(function(){
+
+        $(this).toggleClass("on");
+
+        if($(this).hasClass("on")){ 온 일때 실행
+            //console.log("true");
+            $(".hamberger>.fa").attr("class","fa fa-times");
+        } else {
+            //console.log("false"); 꺼질 때  실행
+            $(".hamberger>.fa").attr("class","fa fa-bars");
+        }
+
+    });
+
+
+여기서 attr은 어트리뷰트(속성)이라는 뜻임 변형할 (클래스, 클래스 네임)을 적으면 됨
+
+
+ $(".hamberger").click(function(){
+
+        $(this).toggleClass("on");
+
+        if($(this).hasClass("on")){
+            //console.log("true");
+            $(".hamberger>.fa").attr("class","fa fa-times");
+            $(".gnb").show();
+        } else {
+            //console.log("false");
+            $(".hamberger>.fa").attr("class","fa fa-bars");
+            $(".gnb").hide();
+        }
+
+    });
+
+
+5/29
+
+메타 데이터 - 컴퓨터만 알 수 있는 가상의 데이터
+
+태그별 의미/기능 설명 
+
+
+
+포트폴리오 
+
+기술에 대한 코드 설명 페이지 +
+기능 및 디자인 개선 개선 과정 설명,  PHP 
+
+
+img 태그 공부
+이미지는 비율을 절대로 건드리면 안됨 -( 비율이 틀어짐 )
+이미지 대체 태그인 alt값은 웹접근성을 위해서 꼭 넣어야함
+
+
+div 태그 공부
+레이아웃을 잡고 문서를 기획하는것.
+
+
+
+전체제작 스타일 or 위에서부터 차례로 제작하여 내려감.
+css 객체 약속어, img 약속어 검색해서 공부해야함.
+
+
+6 / 1
+
+시멘틱태그 수업
+css 값 상속 여부확인.
+
+테이블 태그 수업
+드림위버에 관련된 정보 습득
+백엔드 PHP 
+form 태그 공부 
+( 서버로 전달해야할 데이터를 담는 곳 (form 자식요소로 지정해야함 )
+
+
+
+6/2
+
+textarea 공부
+
++ clear:after   <  (  가상의 속성을 부여함.  주로 float속성으로 인해 
+적용이 안되는 옵션을 적용이 되게끔 해주는 기능 )
+
+적용하고자 하는 태그에  class ="clear" 를 줘서 
+가상의 속성을 부여함.
+ex)
+
+.clear:after{
+    display: block; 해당 태그가 block요소라도 float으로 인해 적용이 안되기 때문에 가상속성에서 block을 걸어야함
+    clear: both;
+    content: '';  가상의 속성은   해당태그가 없으면 적용이 안됨. 꼭 넣어줄것
+}
+
+
+css 공부순서
+
+selector / 중괄호 / 프로퍼티(종류많음)
+
+style(선택자) {  프로퍼티(속성) : 속성값 } << css의 기본 구조
+
+문제는 셀렉터 / 프로퍼티
+
+
+미리 css를 작성해서 html에 적용하는 방법이 있음 -프레임워크 라고함.
+대표적인것이 부트스트랩
+
+
+class와 id 공부 -   css 디자인 측면에서 관례적인것. 
+
+상위는 id    하위는 class
+id는 스타일 중복이 가능하지만 자바스크립트와 제이쿼리에서는 중복되는것은 작동이 안됨.
+
+
+
+6/3 코딩수업
+
+* 반드시 문서내의 전체를 적용할때 사용 or 초기화 기능을 구현할때 사용
+
+html은 연산자가 아니다.
+
+
+li  태그 부분 선택시 필요한  nth-child 공부 
+
+태그속 의미 : n(미지의 수)  th(순서단위뒷글자) -child(2n+1)
+
+css는 이것으로 정리됨
+s ( 속성 ) { p ( 프로퍼티 )  :   v  ;   }
+
+
+가상 사이트 제작
