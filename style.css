@@ -1,115 +1,100 @@
-/* html*/
-/*body*/
-/**/ 
-/* *{   
-    _background: yellow;
+@charset "utf-8";
+
+ul{
+    _list-style-type: armenian;
+    _list-style-type: hiragana;
+    _list-style-type: square;
+    list-style-type: none;
+}
+
+/* list_style_type은 리스트의 나열 기호 종류를 나타내는
+속성이다. 기본적으로 검정색 원형이 나오며, 다양한 언어,
+또는 기호, 이미지 등으로 대체 할 수 있다. 일반적으로
+none 값을 사용해 기호를 없앤 후 내비게이션을 만드는
+용도로 사용된다. */
+
+/* list style 참조 - https://www.w3schools.com/csSref/pr_list-style-type.asp */
+
+.back{
+    width: 300px;
+    height: 300px;
+    background-color: red;
+}
+
+/* background-color 속성은 요소의 배경 색상을
+지정하는 속성이다. 이 속성은 background라는
+축양형으로 사용할 때 값은 하나여도 된다. */
+
+
+.back_img{
+    width: 300px;
+    height: 300px;
     border: 1px solid;
-} */
-
-/* 5.전체 선택자 : html, body 태그도 전체를 포함시키는 태그 이나, 
-이들은 전체의 외부의 디자인만 적용할 수 있다.따라서 
-전체 각 요소를 포함할 경우 반드시 아스타(*)를 전체 선택자로 
-사용해야한다. */
-
-/*ul li:first-child{
-    background: red;
+    _background-image: url(/img/modern.jpg);
+    _background-repeat: no-repeat;
+    _background-position: center top;
+    _background-position: 50px 100px;
+    
+    background: url(/img/modern.jpg) no-repeat
+    center center;
+    /* 숏핸드 타입 */
+    _background-size: cover;
+    background-size: contain;
 }
 
-ul li:last-child{
-    background: blue;
-}*/
+/* background-img : 주소값 입력
 
-/* ul li:nth-child(2n+1){
-    background: greenyellow;
-}
+background-repeat : 반복 지정, 디폴트는 반복(repeat)
+
+background-position: 사진의 위치 지정, 앞자리는
+좌우 위치, 뒷자리는 위아래 위치
+
+background-size: 사진을 요소 안에 어떻게 채울 것인지 지정.
+cover는 사진이 짤리더라도 요소를 꽉 채움. contain은
+요소에 부분을 남기더라도 사진 전체가 보이도록 지정
+사진과 요소의 비율이 같으면 cover와 contain은 큰 차이가 없음. */
 
 
-ul li:nth-child(odd){
-    background: green;
-} */
+
+/* background-position은 두개 밖에 없다. */
 
 
-ul li:nth-child(2){
-    background: green;
-}
 
-/* 6. 가상 선택자 : 반복되는 태그의 첫번째 순번은 first-child로 선택하며,
-마지막 태그는 last-child로 선택한다.
-
-특정 순번의 태그를 가상 선택할 경우 nth-child(n), 즉 n의
-값으로 순번을 조정한다. */
-
-div, p, em{
-    background: skyblue;
-}
-
-p{
-    color: red;
-}
-
-/* 7. 그룹 선택자 : 공통으로 지정하고 싶은 태그를 콤마(,)로
-나열하여 디자인 하는 선택자. */
-
-.box1{
+.transform>li{
     width: 200px;
     height: 200px;
-    background: red;
-    position: relative;
-   
+    border: 1px solid;
+    box-sizing: border-box;
+    padding: 30px;
+    margin-top: 10px;
 }
 
-.box2{
-    width: 400px;
-    height: 400px;
-    background: green;
-    position: relative; 
+.transform>li>div{
+    width: 100%;
+    height: 100%;
+    background: rgb(54, 100, 250);
+    transition: all 0.4s ease;
 }
 
-.box2 .inside_box{
-    width: 100px;
-    height: 100px;
-    background: yellow;
-    position: fixed;
-    top: 0;
-    right: 0;
+.transform>li:nth-child(1)>div{
+    _transform: translateX(50px);
+    _transform: translateY(50px);
+    transform: translate(30px, 30PX);
+}
+
+.transform>li:nth-child(2)>div:hover{
+    _transform: scaleX(1.5);
+    _transform: scaleY(1.5);
+    transform: scale(1.2, 1.2);
 }
 
 
-
-
-
-/* 모든 태그들은 첨에 position : static 상태이다(디폴트값).
-static 속성의 특징
-특징 1 : 작성한 흐름을 유지한다.
-특징 2 : left, top, bottom, right 등의 속성으로 위치 이동이 안된다.
-따라서 레이아웃 요소에 주로 사용된다.
-*/
-
-
-/* relative 속성의 특징 1 : 흐름은 static과 마찬가지로 작성한 순서대로 위치한다.
-2 : 위치  속성으로 이동이 가능하며, 그 시작점은 자신의 원래 위치이다. */
-
-
-/* absolute : static이 아닌 부모를 기준으로 위치를 이동한다. 부모가
-static 포지션일 경우 그 상위 부모의 포지션에 접근하고, 상위 부모도 
-static 포지션일 경우 최종적으로 브라우저를 기준으로 움직인다.
-따라서 absolute 포지션을 사용해야 하는 경우 부모의 태그에 반드시 포지션을
-지정해 줘야 한다.
-*/
-
-/* fixed : fixed 포지션은 부모의 포지션과 상관없이 무조건 브라우저를 기준으로 
-위치를 이동한다. */
-
-
-a{
-    text-decoration: none;
-    color: #bbb;
+.transform>li:nth-child(3)>div:hover{
+    transform:rotate(50deg);
+    _transform: rotateY(30deg);
+    /* rotate 속성에 X, Y 값을 지정하면
+    줄어드는 효과가 나며 돌아가는 본연의
+    효과는 없다. */
 }
 
-/* text-decoration 속성은 글자의 라인 표시에 사용되며, 없애고 싶은 경우
-none 값을 지정하면 된다.
-참조 -  https://www.w3schools.com/cssref/pr_text_text-decoration.asp
- */
 
- /* color 속성은 글자의 색을 지정한다. 주의할 점은 text,
- 나 font와 같이 글자를 나타내는 접두어가 사용되지 않는 다는 것이다. */
