@@ -1,100 +1,53 @@
 @charset "utf-8";
 
-ul{
-    _list-style-type: armenian;
-    _list-style-type: hiragana;
-    _list-style-type: square;
-    list-style-type: none;
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,600;1,200;1,500&display=swap');
+
+
+p{
+    _font-size: 20px;
+    _font-size: 200%;
+    font-size: 2em;
+    _font-weight: bold;
+    font-weight: thin;
+    font-family:정희체, 휴먼옛체, 대중체, 무현체, 굴림;
 }
 
-/* list_style_type은 리스트의 나열 기호 종류를 나타내는
-속성이다. 기본적으로 검정색 원형이 나오며, 다양한 언어,
-또는 기호, 이미지 등으로 대체 할 수 있다. 일반적으로
-none 값을 사용해 기호를 없앤 후 내비게이션을 만드는
-용도로 사용된다. */
+b{
+    font-size: 14px;
 
-/* list style 참조 - https://www.w3schools.com/csSref/pr_list-style-type.asp */
-
-.back{
-    width: 300px;
-    height: 300px;
-    background-color: red;
+    font-weight: normal; 
+    /*원래있는 폰트의 속성을 초기화 할때 사용*/
 }
 
-/* background-color 속성은 요소의 배경 색상을
-지정하는 속성이다. 이 속성은 background라는
-축양형으로 사용할 때 값은 하나여도 된다. */
-
-
-.back_img{
-    width: 300px;
-    height: 300px;
-    border: 1px solid;
-    _background-image: url(/img/modern.jpg);
-    _background-repeat: no-repeat;
-    _background-position: center top;
-    _background-position: 50px 100px;
+.line-height{
+    font-family: 'Source Code Pro', monospace;
+    font-size: 20px;
     
-    background: url(/img/modern.jpg) no-repeat
-    center center;
-    /* 숏핸드 타입 */
-    _background-size: cover;
-    background-size: contain;
-}
-
-/* background-img : 주소값 입력
-
-background-repeat : 반복 지정, 디폴트는 반복(repeat)
-
-background-position: 사진의 위치 지정, 앞자리는
-좌우 위치, 뒷자리는 위아래 위치
-
-background-size: 사진을 요소 안에 어떻게 채울 것인지 지정.
-cover는 사진이 짤리더라도 요소를 꽉 채움. contain은
-요소에 부분을 남기더라도 사진 전체가 보이도록 지정
-사진과 요소의 비율이 같으면 cover와 contain은 큰 차이가 없음. */
-
-
-
-/* background-position은 두개 밖에 없다. */
-
-
-
-.transform>li{
-    width: 200px;
-    height: 200px;
-    border: 1px solid;
-    box-sizing: border-box;
-    padding: 30px;
-    margin-top: 10px;
-}
-
-.transform>li>div{
-    width: 100%;
-    height: 100%;
-    background: rgb(54, 100, 250);
-    transition: all 0.4s ease;
-}
-
-.transform>li:nth-child(1)>div{
-    _transform: translateX(50px);
-    _transform: translateY(50px);
-    transform: translate(30px, 30PX);
-}
-
-.transform>li:nth-child(2)>div:hover{
-    _transform: scaleX(1.5);
-    _transform: scaleY(1.5);
-    transform: scale(1.2, 1.2);
+    line-height: 1.6em;
+    /* 여기서 디폴트 값이 em단위 이기때문에
+    뒤에 em을 안 붙여도 em으로 적용됨*/
 }
 
 
-.transform>li:nth-child(3)>div:hover{
-    transform:rotate(50deg);
-    _transform: rotateY(30deg);
-    /* rotate 속성에 X, Y 값을 지정하면
-    줄어드는 효과가 나며 돌아가는 본연의
-    효과는 없다. */
-}
+/* font_size 속성은 절대 단위와 상대단위가 있으며,
+절대단위로는 대부분 px을 사용한다. 상대단위로는
+대부분 em을 사용하며, 최근 rem을 
+많이 사용하고 있는 추세이다.
 
+참조 > http://pxtoem.com/
+*/
 
+/* font_weight 속성은 글자의 두께를 조정하는 
+속성이며, bold, nomal, thin의 값을 가진다.
+이 중 thin은 구현이 되지 않을 값이어서 잘
+사용되진 않는다. */
+
+/*
+line-height 속성은 줄간을 만들어 준다.
+line-height는 주로 상대값을 적용해야 하며,
+단위는 em을 쓴다. 특히 단위를 적지 않으면 기본
+단위로 em이 된다. */
+
+/* font-family 속성은 글자체를 지정하는 속성이다. 글자체는 기본적으로 컴퓨터에 저장된
+글씨체를 기본으로 하지만, 일반적으로 웹폰트를 많이 사용한다. */
