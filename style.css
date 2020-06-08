@@ -1,53 +1,70 @@
 @charset "utf-8";
-
-
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,600;1,200;1,500&display=swap');
 
-
-p{
-    _font-size: 20px;
-    _font-size: 200%;
-    font-size: 2em;
-    _font-weight: bold;
-    font-weight: thin;
-    font-family:정희체, 휴먼옛체, 대중체, 무현체, 굴림;
+*{
+    margin: 0;
+    padding: 0;
 }
 
-b{
-    font-size: 14px;
-
-    font-weight: normal; 
-    /*원래있는 폰트의 속성을 초기화 할때 사용*/
-}
-
-.line-height{
-    font-family: 'Source Code Pro', monospace;
-    font-size: 20px;
+.padding_wrap{
+    width: 90%;
+    margin: auto;
+    height: auto;
+    background: yellow;
+    /* padding: 10px 20px 30px 40px;
     
-    line-height: 1.6em;
-    /* 여기서 디폴트 값이 em단위 이기때문에
-    뒤에 em을 안 붙여도 em으로 적용됨*/
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    padding-left: 40px; */
+    border: 1px solid red;
+
+    margin: 40px 30px 20px 10px;
 }
 
+/* padding은 요소의 컨텐츠와 요소의 선(border)
+사이의 공간이다. 축약형의 경우, 하나의 값은
+4방향, 두개의 값은 수직과 수평, 세 개의 값은
+위 수평 수직, 네개의 값은 위 오른쪽 아래 왼쪽
+순으로 정해진다. */
 
-/* font_size 속성은 절대 단위와 상대단위가 있으며,
-절대단위로는 대부분 px을 사용한다. 상대단위로는
-대부분 em을 사용하며, 최근 rem을 
-많이 사용하고 있는 추세이다.
+.margin_wrap{
+    width: 90%;
+    margin: auto;
+    height: 40px;
+    background: red;
+}
 
-참조 > http://pxtoem.com/
-*/
+/* margin 속성은 요소와 요소 사이의 간격을 나타내는 속성이다.
+축약형 방향 적용 순서는  padding과 동일하다. */
 
-/* font_weight 속성은 글자의 두께를 조정하는 
-속성이며, bold, nomal, thin의 값을 가진다.
-이 중 thin은 구현이 되지 않을 값이어서 잘
-사용되진 않는다. */
 
-/*
-line-height 속성은 줄간을 만들어 준다.
-line-height는 주로 상대값을 적용해야 하며,
-단위는 em을 쓴다. 특히 단위를 적지 않으면 기본
-단위로 em이 된다. */
+.box{
+    width: 33.3%;
+    height: 200px;
+    float: left;
+    border: 1px solid red;
+    box-sizing: border-box;
+}
 
-/* font-family 속성은 글자체를 지정하는 속성이다. 글자체는 기본적으로 컴퓨터에 저장된
-글씨체를 기본으로 하지만, 일반적으로 웹폰트를 많이 사용한다. */
+.box:nth-child(1){background: #222;}
+.box:nth-child(2){background: #444;}
+.box:nth-child(3){background: #666;}
+
+/* box-sizing 속성은 값으로 content-box와 border-box를 가지며,
+content-box는 디폴트이다.
+
+요소에 선이나 패딩을 적용했을때 전체 크기를 유지하면서 요소의
+안쪽으로 값이 적용되게 하는 값은 border_box이며, 상당히 
+자주 쓰이는 속성 값이다. */
+
+.border{
+    width: 100px;
+    height: 100px;
+    border-width: 50px;
+    border-style: solid;
+    border-top-color: red;
+    border-left-color: yellow;
+    border-right-color: green;
+    border-bottom-color: blue;
+}
