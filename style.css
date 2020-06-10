@@ -66,3 +66,36 @@ ex) transition: all 0.5s ease; */
     100%{background: red;}
 
 }
+
+/* animation 속성은 이름을 지정한 후 해당 이름을
+@keyframes 속성의 안쪽에 지정한다. 
+@keyframes 안쪽에는 에니메이션 시작되는 점과 끝나는 점
+등의 스타일을 지정한다.
+
+animation 속성 역시 일반적으로 축약형으로 사용한다. 
+*/
+
+.layout{
+    width: 16.6%;
+    height: 250px;
+    float: left;
+}
+
+.layout:nth-child(1){background: red;}
+.layout:nth-child(2){background: yellow;}
+.layout:nth-child(3){background: lime;}
+.layout:nth-child(4){background: blue;}
+.layout:nth-child(5){background: pink;}
+.layout:nth-child(6){background: blueviolet;}
+
+
+@media screen and (min-width:768px) and (max-width:1200px) {
+    .layout{
+        width: 33.33%;
+    }
+}
+@media screen and (max-width:767px){
+    .layout{
+        width: 100%;
+    }
+}
