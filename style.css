@@ -40,4 +40,29 @@ p{
 
 /* transition 속성은 병화하는 대상의 변화 속성과 시간
 등을 컨트롤 해주는 속성이다. 변화 하는 요소에 직접 작성해
-주는 것이 정석이며, 주로 축약형으로 값을 지정한다. */
+주는 것이 정석이며, 주로 축약형으로 값을 지정한다.
+ex) transition: all 0.5s ease; */
+
+.animation{
+    width: 100px;
+    height: 100px;
+    background: green;
+    _animation-name:abc;
+    _animation-duration: 1s;
+    _animation-fill-mode: forwards;
+    _animation-delay: 0.5s;
+    _animation-iteration-count: infinite;
+    _animation-direction: alternate;
+    animation: abc 1s 0.5s infinite;
+}
+
+@keyframes abc{
+
+    _from{background: green;}
+    _to{background: red;}
+
+    0%{background: green;}
+    50%{background: yellow;}
+    100%{background: red;}
+
+}
