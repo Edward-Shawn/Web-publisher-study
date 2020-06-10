@@ -167,6 +167,166 @@ li  태그 부분 선택시 필요한  nth-child 공부
 
 css는 이것으로 정리됨
 s ( 속성 ) { p ( 프로퍼티 )  :   v  ;   }
+( li / a 태그를 미리 써놓는 경우는 나중에 새로운 li /  a
+를 만들때 바로 적용되게끔 할려고 함 ) 
 
 
-가상 사이트 제작
+background 속성 공부 
+
+transform 속성 공부
+
+호버 속성의  레이아웃 크기 조절시 
+transform: scale(1.2, 1.2); 를 이용하여 사용
+
+
+gradient 속성 공부
+
+https://www.colorzilla.com/gradient-editor/ 를 이용하여
+좀더 쉽고 다양한 그라디언트 패턴을 조절해서 적용해볼수 있음.
+
+6/4
+
+백그라운드 / 그라디언트(레이아웃 및 배경색상)
+/ 리스트 스타일 ( ul / ol ) / 트랜스폼 (div 레이아웃 형태변환 관련)
+트랜스폼이 적용된 레이아웃의 3D같은 시점 변화는
+참조요소에 펄스펙티브 속성을 적용해서 사용한다.
+
+
+6/5
+
+텍스트의 크기단위 em 
+http://pxtoem.com/ < px 크기를 em단위로 줄여주는 사이트
+
+그러나 대부분 px 사이즈로 정함
+
+font-weight 속성 공부
+
+line-height (줄 높이) 공부
+
+외부의 폰트 스타일 적용공부
+css 창에 폰트 링크 넣기 
+
+https://fonts.google.com/ 폰트 저장 참조사이트
+
+
+cdn 에서 불러와서 쓰는것을 자주사용함
+
+
+*면접관 질문
+어떤 웹사이트를 만들 때 api를 어디서 가져와서 사용해야한는데
+할수있냐?  api는 뭐냐? 
+
+
+외부 cdn 불러오기
+awesome font 4.7 cdn
+부트스트랩 cdn
+
+표기법
+html                     띄어쓰기 사용가능
+background-color    CSS 띄워쓰기 금지
+backgroundColor     자바스크립트 
+
+나이키 사이트 - 
+nth-child 보다  클래스 속성 on을 부여하는 이유는 
+유동적이여야 하기 때문 즉 스크립트를 적용하기 위함임.
+
+
+
+원 댑스 / 투 댑스-   호버시 추가 메뉴가 나오는 현상
+
+사람들은 디자인에 100%를 추구하다 이제는 사용성에 초점을 맞춤
+즉  디자인은 이제 UI에서 UX로 넘어가는 추세임 
+
+
+6/8 수업
+
+나이키 데모사이트 대각선 박스 디자인
+transform: skewX(40deg);  기울기 담당
+
+margin / padding / box-sizing / border. 속성공부
+
+자식요소클릭시 한칸 띄우기
+
+li a ( 문서내의 전체 )  와   li > a ( 문서내의 특정요소 ) 속성 차이점 공부하기
+
+6/9 수업
+
+letter-spacing / word-spacing 공부
+부모의 opacity가 적용되면 자식 요소에도 같이 적용됨]
+
+트랜스폼 옵션 4가지
+스큐 / 트랜스레이트(이동) / 로테이트 / 스케일
+
+나이키 데모사이트에 
+이미지가 들어가는 로고 부분  h1으로 처리한 이유?
+상표 로고 외에도 브랜드 네임 검색시
+구글 검색알고리즘에 노출되기 위한 것이기 때문에 h1태그 속에
+브랜드 이름을 같이 넣기위한 목적 ,  
+
+mediaquery
+transition
+animation
+letter-spacing
+
++ 애니메이션 공부
+
+
+
+네비게이션 메뉴는 보통 2댑스 까지만 감 / 3댑스는 지저분해져서 비선호.
+
+
+6/10 수업
+
+요소를 사라지게한는 3요소
+
+opacity: 0;
+display: none;
+left: -9999px;
+
+Flutter - 코딩과 스타일을 동시에 적용할수 있는 녀석
+
+escape 속성 공부 
+animation
+mediaquery
+transtition
+letter-spacing
+
+escape 구글검색 >  특수문자 공부
+
+transition 속성 공부
+css easing 효과 찾아서 공부해볼것 -
+
+transition 타이밍 디폴트는 ease이다.
+
+
+animation 속성 공부
+
+수업방향은? - (웹) 을 주전공 
+
+웹은 front / back
+
+
+front web - 기획은 시장이 좁다.
+
+html / css / js  중심   그다음 back end (PHP) 데이터베이스 까지
+이거 가지고는 시자에서 반도 못한다.
+
+front end 에 3가지 종류의 코딩에 대한 메커니즘 이해가 없으면 어디가나 접근을 못한다.
+
+우선은 back and의 App 개발 쪽의 방향을 생각중.
+
+(중요)
+front -> back 으로 어떻게 넘어가는지 큰 흐름을 잡아야 한다.
+
+
+
+ASD - 빅데이터에 대해 정보검색필요. 인공지능 / 데이터베이스등등
+ ,   파이선 - 단점은 App은 못만듬  BUT 이런것을 시작해보려면
+web 언어에 대한 개념이 잡혀야 가능하다. 이런거 모르고 시작하면
+헤매다 결국 다시 web 언어로 접근해서 출발하게 된다.
+
+
+
+
+
+
