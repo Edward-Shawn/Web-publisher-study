@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+/* reset style */
+
+*{margin: 0; padding: 0;}
+ol, ul{list-style: none;}
+a{text-decoration: none; color: #808080;}
+body{font-family: 'Montserrat', sans-serif; font-weight: 400;}
+
+
+/* layout reset style */
+
+.clear:after{display:block; content: ''; clear: both;}
+.center{max-width: 1200px; width: 100%; margin: auto; height: auto;}
+
+.wrap{width: 100%; height: auto;}
+
+/* top line style */
+
+.top_line{width: 100%; height: 70px; background: #101010;}
+
+
+/* header style */
+
+header{width: 100%; height: 70px; background: #202020; 
+    box-sizing: border-box; border-left: 5px solid #d54ab6; position: relative; top: 20px;}
+
+
+
+
+
+/* header h1{width: 120px; height: 60px; float: left;}
+header h1 img{width: 100%;} */
+
+/* logo style */
+header .logo{width: 120px; height: 60px; float: left; margin-top: 5px;}
+header .logo img{width: 100%;}
+
+/* navigation style */
+header .gnb{float: right;  margin-right: 20px; }
+header .gnb li{float: left; padding: 0 20px; height: 70px;  display: flex; align-items: center;}
+header .gnb li a{color: #fff; text-transform: uppercase; font-size: 14px;}
+header .gnb li:hover, header .gnb li.active{background: #555;}
+
+
+/* navigation icon style */
+.nav_icon{width: 24px; height: 24px; float: right; margin-top: 20px; margin:20px 20px 0 0;}
+.nav_icon span{width: 100%; height: 2px; background: #fff; display: block; transition: all 0.4s;}
+.nav_icon span:nth-child(2){margin: 9px 0;}
+
+.nav_icon.on span:nth-child(1){transform:rotate(45deg) translate(10px, 10px);}
+.nav_icon.on span:nth-child(2){opacity: 0;}
+.nav_icon.on span:nth-child(3){transform:rotate(-45deg) translate(5px, -6px);}
+
+
+/* main image section style */
+.main_img{width: 100%; background: #ddd; background: url(../img/home-bg.jpg) no-repeat center center; background-size: cover;}
+
+/* info section style */
+.site_info{width: 100%; height: auto; background: #101010; padding: 50px 0 0 0;}
+
+.site_info .boxes{ width: 100%; height: auto; position: relative; bottom: 150px;}
+.site_info .boxes .box{width: 33.33%; height: auto; float: left;box-sizing: border-box; padding: 15px;}
+.site_info .boxes .box>div{box-sizing: border-box; padding: 30px 20px; width: 100%; height: 100%;text-align: center;}
+.site_info .boxes .box .icon{display: flex; align-items: center; justify-content: center; width: 150px; height: 150px; color: #fff; border: 2px solid #fff; margin: auto; border-radius: 50%;}
+.site_info .boxes .box .icon .fas{font-size: 50px;}
+
+.site_info .boxes .box h2{font-size: 35px; color:#fff; margin: 25px 0;}
+.site_info .boxes .box p{color: #fff; line-height: 1.6;}
+
+.site_info .boxes .box1>div{background: #c14000;}
+.site_info .boxes .box2>div{background: #009988;}
+.site_info .boxes .box3>div{background: #ffa500;}
+
+
+/* start up section style */
+.about{width: 100%; height: auto; background: #101010;}
+.about .company{width: 50%; height: 40vh; float: left;}
+.about .start_up_left{background: url(../img/about-img.jpg) no-repeat center center; background-size: cover;}
+.about .start_up_right{box-sizing: border-box; padding:0 30px; background: #222; text-align: left; color: #fff;}
+.about .start_up_right .about_txt{ width: 100%; height: auto;  top: 50%; position: relative; transform: translateY(-50%);}
+.about .start_up_right .about_txt h2{font-size: 35px; color: #fff;}
+.about .start_up_right .about_txt p{font-size: 14px; color: #fff; font-weight: 400; margin: 25px 0; line-height: 1.6;}
+.about .start_up_right .about_txt a{font-size: 14px; padding: 15px 30px; border: 2px solid #fff; width: 150px; text-align: center; display: block; color: #fff;
+transition: all 0.4s ease; }
+
+.about .start_up_right .about_txt a:hover{background: #fff; color: black;}
+
+
+/* portfolio section style */
+.portfolio{width: 100%; height: auto; background: #101010;}
+.portfolio .port_con_box{width: 1005; height: auto;}
+.portfolio .port_con_box .port_con{width: 33.33%;height: 200px; background: skyblue;float: left;}
