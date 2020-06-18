@@ -10,19 +10,21 @@
     <link rel="stylesheet" href="css/media.css">
 </head>
 <body>
+    <h4 style="position: fixed; color: white; z-index: 99; font-size: 50px;"></h4>
     <div class="wrap">
-        <div class="top_line">
+        <div class="top_line" id="home">
             <div class="center">
+                <h1 id="top"></h1>
                 <header>
                     <h1 class="logo">
                         <img src="img/logo.png" alt="OneTel">
                     </h1>
 
                     <ul class="gnb">
-                        <li class="active"><a href="#">home</a></li>
-                        <li><a href="#">about us</a></li>
-                        <li><a href="#">portfolio</a></li>
-                        <li><a href="#">contact</a></li>
+                        <li class="active"><a href="#" value="home">home</a></li>
+                        <li><a href="#about" value="about us">about us</a></li>
+                        <li><a href="#portfolio" value="portfolio">portfolio</a></li>
+                        <li><a href="#" value="contact">contact</a></li>
                     </ul>
                     <div class="nav_icon">
                         <span></span>
@@ -70,7 +72,7 @@
             </div>
         </section><!----end of site info---->
 
-        <section class="about">
+        <section class="about" id="about">
             <div class="center clear">
                 <div class="company start_up_left">
 
@@ -88,18 +90,104 @@
                 </div>            
             </div>
         </section><!----end of startup---->
-        <section class="portfolio">
+
+        <section class="portfolio" id="portfolio">
             <div class="center">
-                <div class="port_con_box clear">
-                    <div class="port_con"></div>
-                    <div class="port_con"></div>
-                    <div class="port_con"></div>
-                    <div class="port_con"></div>
-                    <div class="port_con"></div>
-                    <div class="port_con"></div>
-                </div>
+
+                <div class="title_box">
+                    <h2 class="title">Recent Project</h2>
+                    <p class="title_txt">What is Lorem Ipsum Lorem Ipsum is simply dummy<br> 
+                        text of the printing and typesetting Lorem Ipsum is simplyWhat</p>
+                </div>        
+
+                    <div class="port_con_box clear">
+                        <div class="port_con">
+                            <div>
+                                <span>
+                                    <img src="img/portfolio-img1.jpg" alt="portfolio1">
+                                </span>
+                                <div class="con_box_box">
+                                    <h3>Luby Web</h3>
+                                    <p>What is Lorem Ipsum Lorem Ipsum is simply dummy</p>
+                                    <a href="#">VIEW MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="port_con">
+                            <div>
+                                <span>
+                                    <img src="img/portfolio-img2.jpg" alt="portfolio1">
+                                </span>
+                                <div class="con_box_box">
+                                    <h3>Locla App</h3>
+                                    <p>What is Lorem Ipsum Lorem Ipsum is simply dummy</p>
+                                    <a href="#">VIEW MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="port_con">
+                            <div>
+                                <span>
+                                    <img src="img/portfolio-img3.jpg" alt="portfolio1">
+                                </span>
+                                <div class="con_box_box">
+                                    <h3>Creative Design</h3>
+                                    <p>What is Lorem Ipsum Lorem Ipsum is simply dummy</p>
+                                    <a href="#">VIEW MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="port_con">
+                            <div>
+                                <span>
+                                    <img src="img/portfolio-img4.jpg" alt="portfolio1">
+                                </span>
+                                <div class="con_box_box">
+                                    <h3>Cross Platform</h3>
+                                    <p>What is Lorem Ipsum Lorem Ipsum is simply dummy</p>
+                                    <a href="#">VIEW MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="port_con">
+                            <div>
+                                <span>
+                                    <img src="img/portfolio-img5.jpg" alt="portfolio1">
+                                </span>
+                                <div class="con_box_box">
+                                    <h3>ES6 Frienddly</h3>
+                                    <p>What is Lorem Ipsum Lorem Ipsum is simply dummy</p>
+                                    <a href="#">VIEW MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="port_con">
+                            <div>
+                                <span>
+                                    <img src="img/portfolio-img6.jpg" alt="portfolio1">
+                                </span>
+                                <div class="con_box_box">
+                                    <h3>Flutter Project</h3>
+                                    <p>What is Lorem Ipsum Lorem Ipsum is simply dummy</p>
+                                    <a href="#">VIEW MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
             </div>
         </section><!--end of portpolio-->
+        <footer>
+            <div class="center clear">
+                <p class="copy">Copyright &copy; UnkindSoft All Right Reseved.</p>
+                    <ul class="sns_box clear">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                    </ul>
+            </div>
+        </footer>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>

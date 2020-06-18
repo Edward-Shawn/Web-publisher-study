@@ -9,6 +9,10 @@
     .site_info .boxes .box3{width: 100%;}
     .nav_icon{display: none;}
 }
+@media screen and (max-width:900px){
+    .about .company{width: 100%;}
+    .portfolio .port_con_box .port_con{width: 50%;}
+}
 
 
 @media screen and (max-width:700px){
@@ -26,4 +30,9 @@
     .site_info .boxes .box2{width: 100%;}
     .site_info .boxes .box3{width: 100%;}
 
+    .portfolio .port_con_box .port_con{width: 100%;}
+
+
+    footer .copy{display: none;}
+    footer .sns_box{float: none; margin: auto; width: 50%; display: flex; justify-content: center;}
 }
