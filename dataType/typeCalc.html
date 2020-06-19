@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Type Calculation</title>
+</head>
+<body>
+    <script>
+
+        var a = 12;
+        var b = 30;
+        var c = a + b;  
+        document.write(c, "<br>");
+
+        var d = 15;
+        var e = "20";
+        var s = Number(e);
+        //var f = d + e;
+        //var f = d * e;
+        var f = e - d;
+
+        document.write(typeof(s));
+
+        //자바스크립트 타입은 연산이 이뤄질때,
+        //서로 다른 타입을 자동으로 변환 시킬 수 있다.
+        //이를 암묵적 형변환이라 한다.
+        //Number(), String() 등의 함수를 사용해 의도적으로 형태를 변환 시키는 것을
+        //명시적 변환이라 한다.
+    </script>
+</body>
+</html>
