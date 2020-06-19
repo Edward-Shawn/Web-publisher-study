@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global local</title>
+</head>
+<body>
+    <script>
+        
+        var global = "전역"; //전역 변수
+
+        function exp(){   //함수 정의
+            var local = "로컬"; //지역 변수
+            document.write(local, "<br>");
+            document.write(global, "<br>");
+        }
+
+        exp(); // 함수 선언
+        document.write("------------------------<br>")
+        //document.write(local, "<br>");
+        document.write(global, "<br>");
+
+        //전역 변수는 함수외부와 내부 모두에서 사용할 수 있다.
+        //함수 안에 정의된 지역 변수는 함수 내부에서만
+        //사용이 가능하다.
+
+    </script>
+</body>
+</html>
