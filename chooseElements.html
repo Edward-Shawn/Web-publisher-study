@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Elements</title>
+</head>
+<body>
+    <button onclick="insertTxt()">click</button>
+    <p id="txt">hello javascript</p>
+    <button onclick="chsOne()">li click</button>
+
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+
+
+    <p id="chooseOne">
+
+    </p>
+
+    <script>
+
+        function insertTxt(){
+            var pTag = document.getElementById("txt");
+            pTag.innerHTML = "Hello World!!";
+        }
+
+        function chsOne(){
+            var liTag = document.getElementsByTagName("li");
+            var pTag = document.getElementById("chooseOne");
+            pTag.innerHTML = liTag[i].innerHTML;
+        }
+        
+    </script>
+</body>
+</html>
