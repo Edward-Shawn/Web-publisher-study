@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Method</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+    <style>
+        div{width: 200px; height: 200px;}
+        div.green{background: green;}
+        div.yellow{background: yellow;}
+    </style>
+</head>
+
+<body>
+    <button class="btn1">click1</button>
+    <button class="btn2">click2</button>
+
+    <div class="green"></div>
+
+    <script>
+        $(document).ready(function(){
+            $(".btn1").click(function(){
+                $("div").attr({
+                    "class":"green"
+                });
+            })
+
+            $(".btn2").click(function(){
+                $("div").attr({
+                    "class":"yellow"
+                });
+            })
+
+            //alert($("div").attr("class"));
+
+        });
+    </script>
+</body>
+</html>
