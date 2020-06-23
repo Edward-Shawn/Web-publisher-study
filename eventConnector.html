@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Event Connectors</title>
+    <style>
+        div{width: 150px; height: 150px;}
+        div.box1{background: red;}
+        div.box2{background: yellow;}
+        div.box3{background: green; width: 250px; height: 250px;}
+    </style>
+</head>
+<body>
+
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <p></p>
+    <script>
+        //$("p").click(function(){명령..});
+        //$(selector).on("", function(){
+        //});
+        $(document).ready(function(){
+            $(".box1").on("click", function(){
+                $("p").text("box1을 클릭했습니다.");
+            });
+
+            $(".box2").on("mouseenter", function(){
+                $("p").text("box2에 마우스를 올렸습니다.");
+            });
+
+            $(".box2").on("mouseleave", function(){
+                $("p").text("box2로부터 마우스가 벗어났습니다.");
+            });
+
+            $(".box3").on("mousemove", function(){
+                $("p").text("마우스가 움직입니다.")
+            });
+
+
+        });
+
+        
+    </script>
+</body>
+</html>
