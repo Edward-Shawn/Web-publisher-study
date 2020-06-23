@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elements Search</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <div>DIV</div>
+    <ul>
+        <P>Paragraph</P>
+        <li><span>List 1</span></li>
+        <li>List 2</li>
+        <li>List 3</li>
+        <li>List 4</li>
+    </ul>
+
+    <script>
+        $(document).ready(function(){
+
+            //$("li>span").css({"color":"red"});
+            //$("li:nth-child(1)").css({"color":"red"});
+            //$("li").children("span").css({"color":"red"});
+            $("span").parent("li").siblings("p").css({"color":"blue"});
+
+            //직계 자식 요소는 children()메서드로 선택할 수 있으며, 파라미터에 요소를 직접 지정할 수있다.
+
+            //부모 요소 선택은 parent()메서드를 사용하며, 파라미터에 요소를 직접 지정할 수 있다.
+
+            //siblings() 메서드는 형제를 선택할 수 있으며, 요소가 대상 요소의 이전이든 이후이든 모두 선택 가능하다.
+
+        });
+    </script>
+</body>
+</html>
