@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <title>Event Connectors</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+  </head>
+  <body>
+    <div>
+        <p>div tag</p>
+    </div>
+    <script>
+      $(document).ready(function () {
+        $("div").on("mouseenter",function(){
+             $("div").stop().animate({width:"200px",height:"200px"},800, function(){
+                 $("div>p").stop().animate({
+                     "font-size":"30px"},800);
+                 });
+             });
+        
+        $("div").on("mouseleave",function(){
+             $("div").stop().animate({width:"100px",height:"100px"},800,function(){
+                 $("div>p").stop().animate({
+                     "font-size":"16px"},800);
+                 })
+        });
+           
+      });
+
+      //$(selector).animate({params},speed,callback);
+    </script>
+  </body>
+</html>
