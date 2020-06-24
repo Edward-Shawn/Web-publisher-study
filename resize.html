@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Event Connectors</title>
+    <style></style>
+  </head>
+  <body>
+    <h1>
+      가로
+      <p>00</p>
+    </h1>
+    <h2>
+      세로
+      <p>00</p>
+    </h2>
+    <script>
+      $(document).ready(function () {
+        $(window).on("resize", function () {
+          //중간에 on 이 들어가는건 태그들을 연결해준다는 의미고 안정성 때문에 사용
+          //$(window).resize(function (){}   < 다이텍트로 지정하는 방법
+          var win = $(window).width();
+          var hei = $(window).height();
+          $("h1 p").text(win);
+          $("h2 p").text(hei);
+        });
+      });
+    </script>
+  </body>
+</html>
