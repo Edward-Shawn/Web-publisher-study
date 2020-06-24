@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <p></p>
+    <p></p>
+    <p></p>
+    <script>
+        $(document).ready(function(){
+            var now = new Date();
+            var year = now.getFullYear();
+            $('p').eq(0).text(year);
+            var month = now.getMonth();
+            $('P').eq(1).text(month);
+            //월의 경우 인덱스로 인식하여 1월이 0부터 시작되는 값이다.
+            var date = now.getDate();
+            $('P').eq(2).text(date);
+            //https://www.w3schools.com/js/js_date_methods.asp 참조
+
+            
+        });
+    </script>
+</body>
+</html>
