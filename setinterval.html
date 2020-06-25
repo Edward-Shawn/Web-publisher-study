@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+
+        span{
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <span>00</span>:
+    <span>00</span>:
+    <span>00</span>
+    <script>
+        $(document).ready(function(){
+            setInterval(function(){
+                var now = new Date();
+                var hour = now.getHours();
+                var min = now.getMinutes();
+                var sec = now.getSeconds();
+
+                $('span').eq(0).text(hour);
+                $('span').eq(1).text(min);
+                $('span').eq(2).text(sec);
+            },1000);
+        })
+    </script>    
+</body>
+</html>
