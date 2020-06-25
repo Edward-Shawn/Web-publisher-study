@@ -1,45 +1,25 @@
 $(document).ready(function(){
-    // var winWidth = $(window).width() * 0.35;
-        $(".main_img").height($(window).width() * 0.35);
 
-    $(window).resize(function(){
-        var winWidth = $(window).width() * 0.35;
-        $(".main_img").height(winWidth);
-        // 윈도우의 길이 값을  winWidth에 대입한다.
-    });
+   var imgs = '';
 
-    //menu icon click event
-    $(".nav_icon").click(function(){
-        $(this).toggleClass("on");
-        $("header .gnb")
+   for(i=0; i< 200; i++){
+       //imgs = i;
+       //console.log(imgs);
+       imgs += '<img src="img/pic' + i + '.jpg">'
+   }
 
-        if($(this).hasClass("on")){
-            $(".gnb").slideDown();
-        } else {
-            $(".gnb").slideUp();
-        }
-    });
+   $('section').html(imgs);
 
-
-    // header stick when mouse scrolling down
-    let hedTop = $("header").offset().top;
-    $(window).scroll(function(){
-       let scroll = $(window).scrollTop();
-
-       // $("h4").text(scroll);
-       if(scroll>=hedTop){
-        $("header").addClass("scroll");
-       }else{
-           $("header").removeClass("scroll");
-       }
-    });
-
-    $(".gnb li ").click(function(){
-      let valuePos = $(this).find("a").attr("value");
-      let offsetTop = $("#"+valuePos).offset().top;
-        //alert(valuePos)
-        $("html, body").animate({scrollTop:offsetTop -70}, 500);
-    });
+   $("body").on("mousemove", function(e){
+        var posX = e.pageX;
+        var winWidth = $(window).width();
+        var calcWidth = Math.floor((posX/winWidth)* 200);
+        //floor() 함수는 소수점 이하를 버린다
+        //https://www.w3schools.com/js/js_math.asp
+        $("h3").text(calcWidth);
+        $("section>img").hide();
+        $("section>img").eq(calcWidth).show();
+   });
 
 
 });
