@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        header{width: 100%;height: 80px;background: gray;}
+        .mid{width: 100%;height: 600px;background: rgb(192, 231, 192);}
+
+       
+        .container{ position: relative; max-width: 300px;height: auto;overflow: hidden; top: 50%; left: 50%; transform: translate(-50%,-50%);  }
+        .container>img{display: block;transition: 0.4s;}
+        .container:hover>img{transform: scale(1.2);}
+        .overay{top: 0;position: absolute;background: rgba(0, 0, 0, 0.308);width: 100%;height: 100%;opacity: 0;transition: 0.5s;}
+        .overay>P{position: absolute;margin-left: 5%; bottom: 2%;color: white;font-size: 20px;text-align: center;}
+        .overay:hover{opacity: 1;}
+       
+
+        
+        span{display: block; float: right; color: red; font-size: 35px; font-weight: bold; }
+
+        .modal{top: 0;left: 0; position: fixed;width: 100%; height: 100%;background: rgba(0, 0, 0, 0.404);display: none;}
+        .mymodal{margin: auto; margin-top: 10vh;height: 80vh;align-items: center; max-width: 1000px;width: 100%; }
+        .mymodal>img{ width: 100%;box-sizing: border-box;padding: 30px;}
+        .mymodal { animation-name: zoom; animation-duration: 0.6s; }
+        
+  
+        @keyframes zoom { from {transform:scale(0)} to {transform:scale(1)}  }
+
+
+    </style>
+</head>
+<body>
+    <header></header>
+    <div class="mid">
+        <div class="container">
+        <img id="myimg" src="/img/p51.jpg" alt="p51" style="max-width: 300px;" width="100%">
+        <div class="overay">
+            <p>P51 Mustang</p>
+        </div>
+        </div>
+    </div>
+
+    <div class="modal">
+        <div class="mymodal">
+            <span id="close">&times;</span>
+            <img id="modalimg"  src="" alt="p51">
+        </div>
+    </div>
+
+    <script>
+        var btn  = document.querySelector('.overay');
+        var modalimg = document.getElementById('modalimg');
+        var modal = document.querySelector('.modal');
+        var close = document.getElementById('close');
+        var img = document.getElementById('myimg');
+
+        btn.onclick = function(){
+            modal.style.display = 'block';
+            modalimg.src = img.src;
+        }
+
+        close.onclick = function(){
+            modal.style.display = 'none';
+        }
+
+
+
+
+    </script>
+
+</body>
+</html>
