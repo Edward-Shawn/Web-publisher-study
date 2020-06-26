@@ -1,50 +1,32 @@
-@charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 
 /* reset css */
-*{
-    margin: 0;
-    padding: 0;
-}
-
+*{margin: 0; padding: 0;}
 ol, ul{list-style: none;}
-body{position: fixed;  width: 100%; height: 100%; background: #111; color: #fff;}
-a{text-decoration: none; color: #bbb;}
-h3{font-size: 100px; position: fixed; top: 0; left: 0; z-index: 10;}
+a{text-decoration: none; color: #555;}
+body{width: 100%; height: 4000px; background: #ddd; font-family: 'Poiret One', cursive;}
 
-/* 배경 문양 스타일 */
-
-.bg{width: 100%; height: 100%; position: fixed; background: url(../img/bgLine.png) repeat 0 0; opacity: 0.1; top: 0; left: 0; z-index: 1;}
-
-/* header style */
-header h1{width: 400px; position: absolute; top: 100px; left:  50%; margin-left: -200px;}
-header h1 img{width: 100%;}
-header ul{position: absolute; top: 60px; right: 30px; z-index: 2;}
-header ul li{float: left; margin-right: 10px; opacity: 0.5; transition: 0.5s;}
-header ul .fa{font-size: 25px; color: #fff;}
-header ul li:hover{transform: scale(1.2); opacity: 1;}
-
-/* main images section style */
-section{position: fixed; width: 100%; height: 500px; top: 50%; margin-top: -250px; left: 0; opacity: 1; overflow: hidden; z-index: 2;}
-section>img{width: 100%; position: absolute; left: 0; top: -150px;}
+/* logo style */
+h1{position: fixed; top: 20px; right: 20px;}
+h1 img{box-shadow: 5px 5px 3px #888;}
+/* box-shadow : (x축) (y축) (그림자가 퍼지는 범위) (색상) */
 
 
-/* 1 depth navigation style */
-nav{width: 100%; height: 50px; position: fixed; z-index: 3; top: 50%; margin-top: -25px; left: 0; background: url(../img/tr.png) repeat 0 0;}
+/* sns page */
 
-nav>ul{width: 1200px; margin: auto; height: 50px;}
-nav>ul>li{width: 200px;height: 50px; float: left; text-align: center; position: relative;}
-nav>ul>li>a{display: block; width: 200px; height: 50px; font-size: 12px; color: #aaa;line-height: 4; transition: all 0.4s; font-family: orbitron;}
-nav>ul>li:hover>a{transform: translateY(-20px); opacity: 0;}
+/* 
+#sns{position: fixed;top: 50px;left: 80px;
+li {float: left;}
+li a{margin-right: 25px;font-size: 30px;color: #fff;}
+ */
+#sns{position: fixed; top: 30px; left: 60px;}
+#sns li{float: left;}
+#sns li a{margin-right: 25px; font-size: 25px; color:#fff; transition:all 0.4s; display: block;}
+#sns li a:hover{transform:scale(1.2); color: #888;}
 
-/* 2 depth navigation style */
+/* moving section layout style */
+section{position: fixed; top: 50%; width: 4600px; height: 500px; margin-top: -250px;  left: 0;}
+section article{position: relative; width: 180px; height: 400px; box-sizing: border-box; background: #fff;float: left; margin:0 10px; top: 50%; margin-top: -200px; border-radius: 5px; box-shadow: 3px 3px 3px #bbb; overflow: hidden;}
 
-nav>ul>li>div{position: absolute; left: 0; top: 0; width: 200px; height: 300px; background: url(../img/tr.png) repeat 0 0; box-sizing: border-box; border: 1px solid #000; padding: 10px 0; transition: all 0.4s; opacity: 0;}
-nav>ul>li:hover>div{top: -100px; opacity: 1; transform: rotateY(360deg);}
-nav>ul>li>div>p{width: 90%; margin: auto; height: 90px; box-sizing: border-box; border: 1px solid #333; overflow: hidden;}
-nav>ul>li>div>p>img{width: 100%; opacity: 0.5;}
-nav>ul>li>div>h2{width: 100%; height: 50px; text-align: center; font-size: 12px; font-family: orbitron; color: #fff; line-height: 3.5;}
-nav>ul>li>div>ul{width: 100%; height: 140px;}
-nav>ul>li>div>ul>li{width: 100%; height: 25%; box-sizing: border-box; border: 1px solid #111;}
-nav>ul>li>div>ul>li>a{display: block; width: 100%; height: 100%; font-size: 11px; line-height: 2.8; color: #888;}
-nav>ul>li>div>ul>li>a:hover{background: #000; color:#fff;}
+article strong{position: absolute; display: block; left: 0; top: 0; width: 100%; height: 300px; overflow: hidden; opacity: 0.4;}
+article strong img{width: 100%;}
