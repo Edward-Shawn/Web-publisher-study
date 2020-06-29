@@ -24,9 +24,42 @@ li a{margin-right: 25px;font-size: 30px;color: #fff;}
 #sns li a{margin-right: 25px; font-size: 25px; color:#fff; transition:all 0.4s; display: block;}
 #sns li a:hover{transform:scale(1.2); color: #888;}
 
+/* navigation style */
+#navi{position: fixed; top: 200px; left: 60px;}
+#navi li{margin-right: 25px; font-size: 18px; color:#fff; float: left; font-weight: bold; transition: all 0.5s; cursor: pointer;}
+#navi li:hover, #navi li.active{color: #888;}
+
+
 /* moving section layout style */
 section{position: fixed; top: 50%; width: 4600px; height: 500px; margin-top: -250px;  left: 0;}
-section article{position: relative; width: 180px; height: 400px; box-sizing: border-box; background: #fff;float: left; margin:0 10px; top: 50%; margin-top: -200px; border-radius: 5px; box-shadow: 3px 3px 3px #bbb; overflow: hidden;}
+section article{position: relative; width: 180px; height: 400px; box-sizing: border-box; background: #fff;float: left; margin:0 10px; top: 50%; margin-top: -200px; border-radius: 5px; box-shadow: 3px 3px 3px #bbb; overflow: hidden; transition: all 0.8s;}
 
-article strong{position: absolute; display: block; left: 0; top: 0; width: 100%; height: 300px; overflow: hidden; opacity: 0.4;}
-article strong img{width: 100%;}
+article strong{position: absolute; display: block; left: 0; top: 0; width: 100%; height: 300px; overflow: hidden; opacity: 0.4; transition: all 0.4s;}
+article strong img{width: 100%; }
+
+article h2{position: absolute; top: 300px; width: 100%; height: 50px; box-sizing: border-box;
+background: #111; cursor: pointer; padding-left: 20px; opacity: 0.4;  z-index: 2;}
+
+article h2 a{color: #fff; font-size: 14px; font-weight: bold; line-height: 3.5;}
+
+
+
+article:hover>strong{opacity: 1;}
+article:hover h2{opacity: 0.8;}
+
+article p{height: 0; position: absolute; top: 50%; left: 0; width: 100%; overflow: hidden; margin-top:0; z-index: 1; opacity: 0; transition: all 0.8s;}
+article p img{width: 100%; }
+article  em{position: absolute; bottom: 50px; right: -300px; z-index: 2; display: inline-block; box-sizing: border-box; padding: 10px 20px; background: #000; color: #fff; opacity: 0.8; transition: all 0.8s;}
+
+article span{position: absolute; top: 110px; right: 30px; font-size: 20px; color: #fff;
+    cursor: pointer; z-index: 3; opacity: 0;}
+
+/* article에 'on' 클래스 추가 시 변화된 요소 */
+article.on{width: 780px; height: 500px; margin-top: -250px;}
+article.on h2{top: 100px; height: 100px;}
+article.on h2 a{font-size: 30px; color: #fff;}
+article.on strong{opacity: 0;}
+article.on p{height: 500px; margin-top: -250px; opacity: 1;}
+
+article.on em{right:20px;}
+article.on span{right: 30px; opacity: 1;}

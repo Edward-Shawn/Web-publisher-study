@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* reset */
+ul, ol{
+    list-style: none;
+}
+a{text-decoration: none;}
+
+body{
+    background: #ccc;
+    width: 100%;
+    height: 4000px;
+}
+
+.sns{
+    position: fixed;
+    width: 250px;
+    height: 50px;
+    background: white;
+    top: 50px;
+    left: 60px;
+}
+
+section{
+    position: fixed;
+    top: 250px;
+    width: 4600px;
+    
+}
+
+section article{position: relative; width: 180px; height: 400px; background: #fff; float: left;margin:0 10px;}
+
+#navi{
+    position: fixed;
+    top: 150px;
+    left: 60px;
+}
+#navi li{float: left; margin-right: 50px;
+font-size: 20px; cursor: pointer;padding: 10px 10px;}
+
+#navi li:hover{background: white;}
+
+li.active{
+    background: white;
+}
