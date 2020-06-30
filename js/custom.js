@@ -1,65 +1,48 @@
 $(document).ready(function(){
-    $(window).scroll(function(){
-      var scroll = $(window).scrollTop();
-      $("section").stop().animate({
-          left: -scroll
-      },600);
-    });
+    //--------------------------------
+    //browser's height fix in all kind of browsers
     
-    $("article h2").click(function(e){
-        e.preventDefault();
+    // saving window's heght
+    var ht = $(window).height();
+    //section's height to 'ht'
+    $("section").height(ht);
 
-        var position = $(this).parent().index();
-        var scrollPos = position * 200; 
-        console.log(position);
+    $(window).on("resize", function(){
+        //saving window's height
+        var ht = $(window).height();
+        //section's height to 'ht'
+        $("section").height(ht);
+    })
 
-        // a 태그의 href 속성 값 읽기
-        var src = $(this).children("a").attr("href");
-        console.log(src);
+    $("#menu li").click(function (event){
 
-        //읽어온 a 태그의 href 값을 p 태그의 자식인 img 태그의 src 값으로 대체
-        $("article p img").attr({"src":""});
-        $(this).siblings("p").children("img").attr({"src":src});
+        event.preventDefault();
 
-        //선택한 article에 on 클래스 추가
-        $("article").removeClass("on");
-        $(this).parent().addClass('on');
-        $("html,body").scrollTop(scrollPos);
-
-    });
-    
-        //close 클릭 시 on 클래스 제거
-        $("span").click(function(){
-
-            $("article").removeClass('on');
-
-        });
-
-    //    $("#navi li").click(function(){
-           
-    //         $("li").removeClass();
-    //         $(this).addClass("active");
-
-
-    //         var position = $(this).index();
-    //         console.log(position);
-    //         var scrollPos = position * 1000;
-    //         $("html,body").scrollTop(scrollPos);
-            
-    //    })
-
-      
-       $("#navi li").click(function(){
-           
-        $("#navi li").removeClass();
-        $(this).addClass("active");
+        $("#menu li").removeClass();
+        $(this).addClass("on");
 
         var i = $(this).index();
-        var naviPosition = i * 1000;
-        $("html,body").scrollTop(naviPosition);
-        
-   })
+        var ht = $(window).height();
+        var secHeight = ht*i;
+
+        $("html").animate({"scrollTop":secHeight},500);
+    });
 
 
+    //mousewheel plugin control
+    $("section").on("mousewheel", function (event, delta){
+        if(delta > 0){    // 델타값
+            //console.log("up")
+            var prev = $(this).prev().offset().top;
+            $("html,body").stop().animate({"scrollTop": prev},1000,"easeOutBounce");
+        }else if(delta < 0){
+            //console.log("down")
+            var next = $(this).next().offset().top;
+            $("html,body").stop().animate({"scrollTop": next},1000,"easeOutBounce");
+        }
+       
+
+    });
+   
 
 });
