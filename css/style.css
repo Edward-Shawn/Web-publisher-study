@@ -6,7 +6,7 @@
 ol, ul{list-style: none;}
 a{text-decoration: none;}
 body{font-size: 12px; line-height: 1.6; font-family: arial; color: #555;}
-
+.container{width: 100%; height: auto; overflow: hidden;}
 
 h1{position: fixed; top: 50px; left: 50px; width: 200px; z-index: 50;}
 h1 img{width: 100%;}
@@ -42,4 +42,37 @@ section:nth-child(1){background-image: url(../img/bg1.jpg);}
 section:nth-child(2){background-image: url(../img/bg2.jpg);}
 section:nth-child(3){background-image: url(../img/bg3.jpg);}
 section:nth-child(4){background-image: url(../img/bg4.jpg);}
+
+/* text constents style */
+section article{position: absolute; top: 50%; transform: translateY(-50%); left: 300px; z-index: 10;}
+section article p{font-family: righteous; font-size: 50px; line-height: 1; letter-spacing: 2px;}
+section article span{font-size: 16px;}
+
+section article.spring p{color: #d4164c;}
+section article.spring span{color: #111;}
+
+section article.summer p{color: #fff;}
+section article.summer span{color: #fff;}
+
+section article.fall p{color: #fff;}
+section article.fall span{color: #ffec6a;}
+
+section article.winter p{color: #005a89;}
+section article.winter span{color: #111;}
+
+
+/* section background image position style */
+.p11{position: absolute; bottom: 20px; right: 20px;}
+.p12{position: absolute; bottom: -40px; right: 130px;}
+.p13{position: absolute; top: 180px; right: 60px;}
+
+.p21{position: absolute; bottom: -480px; right: -180px;}
+.p22{position: absolute; bottom: -40px; right: 130px;}
+
+.p31{position: absolute; bottom: 50px; right: 180px;}
+.p32{position: absolute; bottom: 100px; right: 110px;}
+.p33{position: absolute; bottom: -130px; right: -70px;}
+
+.p41{position: absolute; bottom: -120px; right: 20px;}
+.p42{position: absolute; bottom: -180px; right: 0;}
 
