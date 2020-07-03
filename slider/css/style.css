@@ -19,6 +19,6 @@ display: block; position: absolute;}
 .slideshow-nav a.prev{left: 50px; background: url(../img/sprites.png) no-repeat 0 -19px; _display: none;}
 .slideshow-nav a.next{right: 50px; background: url(../img/sprites.png) no-repeat -80px -18px;}
 
-/* .slideshow-indicator{position: absolute; width: 100%; height: 50px;  bottom: 30px; text-align: center;}
+.slideshow-indicator{position: absolute; width: 100%; height: 50px;  bottom: 30px; text-align: center;}
 .slideshow-indicator a{display: inline-block; width: 16px; height: 14px; background: #fff; border-radius: 50%; margin: 0 5px;}
-.slideshow-indicator a.active{background: #555;} */
+.slideshow-indicator a.active{background: #555;}
