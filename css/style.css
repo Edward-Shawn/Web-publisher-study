@@ -1,14 +1,92 @@
-/* reset */
-*{margin: 0; padding: 0;}
-ul,ol{list-style: none;}
-a{text-decoration: none; color: #fff;}
+*{margin:0; padding:0;}
+ul{list-style:none;}
+a{text-decoration:none;}
 
-.slideshow{background: #000; height: 456px; width: 960px; overflow: hidden; position: relative; margin: auto;}
-.slideshow .slideshow-slides{position: absolute; width: 100%; height: 100%;}
-.slide{width: 100%; height: 100%; position: absolute; overflow: hidden;}
-.slide img{width: 100%; position: absolute; height: 100%;}
+.wrap{width:100%; height:auto; overflow:hidden;}
+.clear:after{content:''; display:block; clear:both;}
+.center{width:100%; height:auto; max-width:1200px; margin:auto;}
+.title{font-size: 25px; color: indigo; padding: 20px 0 0 0;}
 
-.slide:nth-child(1){left: 0;}
-.slide:nth-child(2){left: 100%;}
-.slide:nth-child(3){left: 200%;}
-.slide:nth-child(4){left: 300%;}
+.slideContainer{width:100%; height:500px; position:relative;overflow:hidden; }
+.overlay{display:block; position:absolute; width:100%; height:100%; background:#fff; opacity:0.4; top:0; left:0;}
+.slideBox{width:100%; height:500px; position:absolute; left:-100%;}
+.slideBox .slide{position:absolute; width:100%; height:500px;}
+.slideBox .slide img{width:100%; position:absolute; top:-300px;}
+
+.controlls{z-index:100; position:absolute; width:90%; bottom:30px; text-align:left; left:2%;}
+.controlls a{display:inline-block;padding:8px 13px; border:2px solid #fff; color:#fff; text-align:center; font-weight:bold; transition:all 0.4s;}
+.controlls a:hover, .controlls a.on{background:#fff; color:#222;}
+
+header{width:100%; height:auto; background:indigo; position:relative;}
+header .gnb{width:50%; height:auto; float:right;}
+header .gnb li{width:25%; height:auto; float:left; text-align:center;}
+header .gnb li a{transition:all 0.4s; color:#fff; padding:20px 0; display:block;}
+header .gnb li a:hover, header .gnb li.active a{color:indigo; background:#fff;}
+
+section{width:100%; height:100vh; text-align:center; box-sizing: border-box;  padding: 200px 0px;}
+
+section.box1{box-sizing: border-box; }
+
+section.box1 .contents{width: 60%; margin: auto;}
+section.box1 .panels{overflow: hidden; height: 600px;}
+section.box1 .panels  img{height: 100%;}
+section.box2{background:#a092d4;}
+section.box3{background:#a381b8; height:1000px;}
+
+
+
+
+footer{width:100%; height:auto; background:#222; text-align:center;}
+footer p{color:#fff; font-size:20px; }
+
+.mobile_menu{width:25px; height:25px; float:right; padding:20px; display:none; cursor:pointer;}
+.mobile_menu i{color:#fff; font-size:25px;}
+
+.inputBox{width: 60%; height: auto; margin: auto;}
+.inputBox .idInfo{width: 100%; height: auto; box-sizing: border-box; padding: 10px;}
+.inputBox  input{width: 100%; height: 40px; border: 1px solid indigo; border-radius: 0; outline: 0; box-sizing: border-box; padding: 20px; }
+.inputBox .emailIfo{width: 100%; height: auto; box-sizing: border-box; padding: 10px;}
+.inputBox .emailIfo .email{display: block; float: left; height: 40px; box-sizing: border-box; outline: 0;}
+.inputBox .emailIfo .email_1{width: 45%;} 
+.inputBox .emailIfo b{width: 5%; text-align: center; border: 0; line-height: 2.5;}
+.inputBox .emailIfo .email_2{width: 50%;}
+
+.inputBox .message {width: 100%; height: auto; box-sizing: border-box; padding: 10px;}
+.inputBox .message textarea{width: 100%; height: 300px; box-sizing: border-box; padding: 10px; outline: 0; resize: none;}
+.inputBox  button{display: block; width: 150px; padding: 10px 0; font-size: 20px;  background: white; margin: auto; transition: all 0.4s; border: 1px solid indigo;}
+.inputBox  button:hover{background: indigo; color: #fff;}
+
+
+
+@media screen and (max-width:700px){
+    header .gnb{display:none; position:absolute; top:100%; width:100%;}
+    header .gnb li{float:none; width:100%; background:indigo;}
+    .mobile_menu{display:block;}
+}
+
+
+
+  .tabs{
+    width:100%;
+    height:auto;
+  }
+  .tabs>button{
+    display:block;
+    float:left;
+    width:33.33%;
+    margin:0;
+    padding:10px 0;
+    background:#fff;
+    border:1px solid #e0e0e0;
+    cursor:pointer;
+  }
+
+
+  .panels{
+    border:1px solid #e0e0e0;
+    padding:10px;
+  }
+    .active{
+      background:#111!important;
+      color:#fff;
+    }

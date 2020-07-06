@@ -1,27 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>jQuery Basic</title>
     <link rel="stylesheet" href="css/style.css">
-    <title>Slider</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
 
-    <div class="slideshow">
-        <div class="slideshow-slides">
-            <a href="" class="slide" id="slide-1"><img src="img/slide-1.jpg" alt="slide"></a>
-            <a href="" class="slide" id="slide-2"><img src="img/slide-2.jpg" alt="slide"></a>
-            <a href="" class="slide" id="slide-3"><img src="img/slide-3.jpg" alt="slide"></a>
-            <a href="" class="slide" id="slide-4"><img src="img/slide-4.jpg" alt="slide"></a>
+<body>
+    <div class="wrap">
+        <div class="slideContainer movePage">
+            <div class="slideBox">
+                <div class="slide"><img src="img/slide_1.jpg" alt=""></div>
+                <div class="slide"><img src="img/slide_2.jpg" alt=""></div>
+                <div class="slide"><img src="img/slide_3.jpg" alt=""></div>
+            </div>
+            <span class="overlay"></span>
+            <div class="controlls">
+                <a href="#" class="prev"><i class="fa fa-angle-left"></i></a>
+                <a href="#" class="numbering">1</a>
+                <a href="#" class="numbering">2</a>
+                <a href="#" class="numbering">3</a>
+                <a href="#" class="next"><i class="fa fa-angle-right"></i></a>
+                <a href="#" class="pause"><i class="fa fa-pause" aria-hidden="true"></i></a>
+            </div>
         </div>
+        <header>
+            <div class="mobile_menu">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div class="center clear">
+                <ul class="gnb clear">
+                    <li class="active"><a href="#">HOME</a></li>
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JAVASCRIPT</a></li>
+                </ul>
+            </div>
+        </header>
+        <section class="box1 movePage">
+            <h1>BOX</h1>
+           
+                <div class="contents">
+                 <div class="tabs clear">
+                  <button>html</button>
+                  <button>CSS</button>
+                  <button>JAVASCRIPT</button>
+                 </div>
+                 <div class="panels">
+                        <img src="img/slide_1.jpg" alt="">
+                 </div>
+                 <div class="panels">
+                        <img src="img/slide_2.jpg" alt="">
+                </div>
+                <div class="panels">
+                        <img src="img/slide_3.jpg" alt="">
+              </div>
+        </section>
+        <section class="box2 movePage">
+            <h1>CSS</h1>
             
-        <div class="slideshow-nav"></div>
-        <div class="slideshow-indicator"></div>
+        </section>
+        <section class="box3 movePage">
+             <div class="center">
+                <h2 class="title">contact us</h2>
+                <div class="inputBox">
+                        <form action="index.html" class="message_check" method="POST" name="message_check">
+                            <div class="idInfo">
+                                <input type="text" placeholder="your Id" name="check_id">
+                            </div>
+                            <div class="emailIfo clear">
+                                    <input type="text" placeholder="E-mail Address" class="email_1 email" name="email_1">
+                                    <b class="email">@</b>
+                                    <input type="text" placeholder="your E-mail site" class="email_2 email" name="email_2">
+                            </div>
+                            <div class="message ">
+                                    <textarea placeholder="your meessage" name="check_message"></textarea>
+                            </div>
+                
+                            
+                        </form>
+                        <button onclick="check_input()">send</button>
+                </div>
+             </div>
+            
+        </section>
+        <footer>
+            <p>Copyrignt &copy; IdigoSoft Allright reserved.</p>
+        </footer>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/custom.js"></script>
+    <script>
+            function check_input(){
+                if(!document.message_check.check_id.value){
+                    alert("아이디를 입력해 주세요!!");
+                    document.message_check.check_id.focus();
+                    return;
+                }
+                if(!document.message_check.email_1.value){
+                    alert("주소를 입력해 주세요");
+                    document.message_check.email_1.focus();
+                    return
+                }
+                if (!document.message_check.email_2.value){
+                    alert("이메일을 입력해 주세요")
+                    document.message_check.email_2.focus();
+                    return
+                }
+                if (!document.message_check.check_message.value){
+                    alert("메시지를 입력해 주세요")
+                    document.message_check.check_message.focus();
+                    return
+                }
+         
+
+            }
+    </script>
 </body>
+
+
 </html>
