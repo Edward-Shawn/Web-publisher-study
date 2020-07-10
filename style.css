@@ -1,101 +1,182 @@
-@charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,600;1,200;1,500&display=swap');
+/* general reset css */
+body{background: #fff; color: #444; font-family: "Open Sans",sans-serif;}
+a{color: #50d8af; transition: all 0.4s;}
+a:hover{color: #51d8af; outline: none; text-decoration: none;}
+p{padding: 0; margin: 0 0 30px 0;}
+h1, h2, h3, h4, h5, h6{font-family: "Montserrat", sans-serif; font-weight: 400; margin: 0 0 20px 0; padding: 0;}
+textarea{resize: none;}
 
-p{
-    font-size: 25px;
-    font-weight: bold;
-    _letter-spacing: 10px;
-    word-spacing: 30px;
-}
+/* Top bar css */
+#topbar{padding: 10px 0; border-bottom:1px solid #eee ; font-size: 14px;}
+#topbar .contact-info a{line-height: 1; color: #555;}
+#topbar .contact-info a:hover{color: #50d8af;}
+#topbar .contact-info i{color: #50d8af; padding: 4px;}
+#topbar .contact-info .fa-phone{padding-left:20px ; margin-left: 20px; border-left:1px solid #e9e9e9;}
 
-/* letter-spacing은 글자 간의 간격을 나타내는
-속성이며, word-spacing은 단어 사이의 간격을 나타내는 속성이다.
+#topbar .social-links a{color: #555; padding: 4px 12px; display: inline-block; line-height: 1px; border-left:1px solid #e9e9e9;}
+#topbar .social-links a:hover{color: #50d8af; }
+#topbar .social-links a:nth-child(1){border-left: 0;}
 
-일반적으로로 글씨 크기를 크게 할 때 발생하는 
-디폴트 간격을 조정하는 등 디자인 측면의 이유로 사용된다. */
+/* header style */
+#header{padding: 20px 0; height: 84px; z-index: 999; background: #fff; box-shadow: 6px 9px 0 rgba(0, 0, 0, 0.06);}
+#header #logo h1{font-size: 42px; margin: 0; padding: 0;line-height: 1; font-family: "Montserrat"; font-weight: 700;}
+#header #logo h1 a{color: #0c2e8a; line-height: 1; display: inline-block;}
+#header #logo h1 a span{color: #50d8af;}
 
+/* nav css */
+#nav-menu-container{float: right; margin: 0;}
+.nav-menu, .nav-menu *{margin: 0; padding: 0; list-style: none;}
+.nav-menu li{position: relative; float: left;}
+.nav-menu li a{padding: 10px 8px; display: inline-block; color: #555; font-family: "Raleway"; font-weight: 700; font-size: 14px; outline: 0; }
+.nav-menu li:hover>a,
+.nav-menu .menu-active>a{color: #50d8af;}
 
-.transition{
-    width: 100px;
-    height: 100px;
-    background: red;
-    _transition:width 1s;
-    transition-duration: 1s;
-    transition-property: width;
-    _transition-delay: 1s;
-    _transition-timing-function:ease;
-    _transition-timing-function:linear;
-    _transition-timing-function:ease-in;
-    _transition-timing-function:ease-out;
-    _transition-timing-function:ease-in-out;
-    transition:all 1s ease;  
-}
+/* moblie menu css */
+.mobile-nav{float: right; display: none;}
+.mobile-nav i{display: inline-block; font-size: 24px; cursor: pointer; padding: 6px 0 ;}
 
+/* main slide section css */
+#intro{width: 100%; height: 60vh; position: relative; background: url(../img/intro-carousel/1.jpg) no-repeat 0 0;background-size: cover ; padding: 0 ;}
 
+#intro .intro-content{position: absolute; display: flex; justify-content: center; align-items: center; z-index: 12; flex-direction: column; text-align: center; top: 0; left: 0; right: 0; bottom: 0;}
+#intro .intro-content h2{color: #0c2e8a; margin-bottom: 30px; font-size: 64px; font-weight: 700;}
+#intro .intro-content h2 span{color: #50d8af; text-decoration: underline;}
+#intro .intro-content .btn-get-started,
+#intro .intro-content .btn-projects{font-family:"Raleway"; font-size: 15px; font-weight: bold; letter-spacing: 1px; display: inline-block; padding: 10px 32px; border-radius: 2px; margin: 10px; color: #fff; transition: all 0.4s;}
+#intro .intro-content .btn-get-started{background: #0c2e8a; border: 2px solid #0c2e8a;}
+#intro .intro-content .btn-get-started:hover{background: none; color: #0c2e8a;}
+#intro .intro-content .btn-projects{background: #50d8af; border: 2px solid #50d8af;}
+#intro .intro-content .btn-projects:hover{background: none; color: #50d8af;}
 
-.transition:hover{
-    width: 500px;
-    height: 300px;
-}
+#intro #intro-carousel{z-index: 10; position: relative;}
+#intro #intro-carousel::before{content: ''; position: absolute; width: 100%; height: 100%; background: rgba(255, 255, 255, 0.5); left: 0; top: 0; z-index: 11;}
 
-/* transition 속성은 병화하는 대상의 변화 속성과 시간
-등을 컨트롤 해주는 속성이다. 변화 하는 요소에 직접 작성해
-주는 것이 정석이며, 주로 축약형으로 값을 지정한다.
-ex) transition: all 0.5s ease; */
-
-.animation{
-    width: 100px;
-    height: 100px;
-    background: green;
-    _animation-name:abc;
-    _animation-duration: 1s;
-    _animation-fill-mode: forwards;
-    _animation-delay: 0.5s;
-    _animation-iteration-count: infinite;
-    _animation-direction: alternate;
-    animation: abc 1s 0.5s infinite;
-}
-
-@keyframes abc{
-
-    _from{background: green;}
-    _to{background: red;}
-
-    0%{background: green;}
-    50%{background: yellow;}
-    100%{background: red;}
-
-}
-
-/* animation 속성은 이름을 지정한 후 해당 이름을
-@keyframes 속성의 안쪽에 지정한다. 
-@keyframes 안쪽에는 에니메이션 시작되는 점과 끝나는 점
-등의 스타일을 지정한다.
-
-animation 속성 역시 일반적으로 축약형으로 사용한다. 
-*/
-
-.layout{
-    width: 16.6%;
-    height: 250px;
-    float: left;
-}
-
-.layout:nth-child(1){background: red;}
-.layout:nth-child(2){background: yellow;}
-.layout:nth-child(3){background: lime;}
-.layout:nth-child(4){background: blue;}
-.layout:nth-child(5){background: pink;}
-.layout:nth-child(6){background: blueviolet;}
+#intro #intro-carousel .item{width: 100%; height: 60vh; background-repeat: no-repeat; background-size: cover; background-position: center;}
 
 
-@media screen and (min-width:768px) and (max-width:1200px) {
-    .layout{
-        width: 33.33%;
-    }
-}
-@media screen and (max-width:767px){
-    .layout{
-        width: 100%;
-    }
-}
+
+/* #intro #intro-carousel .item:nth-child(1){background-image: url(../img/intro-carousel/1.jpg);}
+#intro #intro-carousel .item:nth-child(2){background-image: url(../img/intro-carousel/2.jpg);}
+#intro #intro-carousel .item:nth-child(3){background-image: url(../img/intro-carousel/3.jpg);}
+#intro #intro-carousel .item:nth-child(4){background-image: url(../img/intro-carousel/4.jpg);}
+#intro #intro-carousel .item:nth-child(5){background-image: url(../img/intro-carousel/5.jpg) ;} */
+
+
+/* section in the main tag - common design elements */
+section{overflow: hidden; padding: 40px 0;}
+
+/* common section's subject style */
+.section-header{margin-bottom: 30px;}
+.section-header h2{font-size: 32px; color: #0c2e8a; text-transform: uppercase; font-weight: 700; position: relative; padding-bottom: 20px;}
+.section-header h2:before{content: ''; display: block; position: absolute; width:50px; height: 3px; background: #50d8af; bottom: 0;}
+
+/* about section css */
+#about{padding: 60px 0 30px 0;}
+#about .about-img{overflow: hidden;}
+#about .about-img img{width: 100%;}
+#about .content h2{color: #0c2e8a; font-weight: 700; font-size: 36px;font-family: "Raleway";}
+#about .content h3{color: #555; font-weight: 300; font-size: 18px; line-height: 26px; font-style: italic;}
+#about .content ul{list-style: none; padding: 0;}
+#about .content ul li{padding-bottom: 10px;}
+#about .content i{font-size: 20px; padding-right: 10px; color: #50d8af;}
+
+/* services section css */
+#services{padding: 30px 0 0 0;}
+#services .box{padding: 40px; margin-bottom: 40px; background: #fff; transition: all 0.4s; box-shadow: 10px 10px 15px rgba(73, 78, 92, 0.1);}
+#services .box:hover{box-shadow: 0 0 30px rgba(73, 78, 92, 0.15); transform: translateY(-10px);}
+
+#services .box .icon{float: left;}
+#services .box .icon i{color:#50d8af; font-size: 64px; transition: all 0.5s; line-height: 0; margin-top: 30px;}
+
+#services .box h4{margin-left: 100px; font-weight: 700; margin-bottom: 15px; font-size: 22px;}
+#services .box h4 a{color: #444;}
+#services .box p{font-size: 14px; margin-left: 100px; margin-bottom: 0; line-height: 24px;}
+
+/* clients section css */
+#clients{padding: 30px 0;}
+#clients img{width: 100%; opacity: 0.5; transition: all 0.4s; padding: 15px 0;}
+#clients img:hover{opacity: 1;}
+#clients .owl-dots{text-align: center; margin-top: 5px;}
+#clients .owl-dot{display: inline-block; margin: 0 5px; width: 12px; height: 12px; outline: 0; border-radius: 50%; background: #ddd;}
+#clients .owl-dot.active{background: #50d8af;}
+
+/* portfolio section css */
+
+#portfolio{background: #fff; padding: 30px 0;}
+#portfolio #portfolio-filters{padding: 0; list-style: none; margin: 0 auto 25px auto; text-align: center; border-radius: 50px;}
+#portfolio #portfolio-filters li{cursor: pointer; display: inline-block; padding: 10px 18px 12px 18px; font-size: 14px; font-weight: 500; line-height: 1; color: #444; background: #f7f7f7; border-radius: 4px; transition: all 0.4s;}
+#portfolio #portfolio-filters li:hover,#portfolio #portfolio-filters li.filter-active{color: #fff; background: #50d8af;}
+
+#portfolio .portfolio-item{margin-bottom: 30px; overflow: hidden;}
+#portfolio .portfolio-item img{width: 100%; position: relative; top: 0; transition: all 0.4s cubic-bezier(.28,.12,.86,.98)}
+/* https://cubic-bezier.com/#.08,.18,.89,.61  효과제어 참조사이트 */
+#portfolio .portfolio-item:hover img{top: -30px; _transform:scale(1.2);}
+
+
+
+#portfolio .portfolio-item .portfolio-info{position: absolute; background: #50d8af;  padding: 15px 50px; z-index: 10; right: 15px; left: 15px;  bottom: 0; opacity: 0; transition: all 0.4s; bottom: -50px;}
+#portfolio .portfolio-item:hover .portfolio-info{opacity: 1; bottom: 0;}
+#portfolio .portfolio-item .portfolio-info h4{font-size: 18px; color: #fff; font-weight: 600;}
+#portfolio .portfolio-item .portfolio-info p{color: #fff; font-size: 14px; margin-bottom: 0;}
+#portfolio .portfolio-item .portfolio-info .preview-link,
+#portfolio .portfolio-item .portfolio-info .details-link{position: absolute; font-size: 24px; color: rgba(255,255,255,0.6); right: 50px; z-index: 10; _top: 50%; _transform:translateY(-50%); top:calc(50% - 18px);}
+#portfolio .portfolio-item .portfolio-info .details-link{right: 15px;}
+
+#portfolio .portfolio-item .portfolio-info .preview-link:hover,
+#portfolio .portfolio-item .portfolio-info .details-link:hover{color:#fff;}
+
+/* testimonials section css */
+#testimonials{padding: 30px 0;}
+#testimonials .testimonial-item{padding: 30px 30px 0 30px; margin: 30px 15px; text-align: center; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1); height: 350px;}
+#testimonials .testimonial-item p{font-style: italic; margin: 0 auto 15px auto;}
+#testimonials .testimonial-item .quote-sign-left{margin-top: -15px; padding-right: 10px; display: inline-block; width: 37px;}
+#testimonials .testimonial-item .quote-sign-right{margin-bottom: -15px; padding-left: 10px; display: inline-block; width: 37px;}
+#testimonials .testimonial-item .testimonial-img{width: 90px; border-radius: 50%; border: 4px solid #fff; margin: 0 auto;}
+#testimonials .testimonial-item h3{font-size: 18px; font-weight: bold; margin: 10px 0 5px 0; color: #111;}
+#testimonials .testimonial-item h4{font-size: 14px; color: #999; margin: 0;}
+
+#testimonials .owl-dots{margin-top: 5px; text-align: center;}
+#testimonials .owl-dot{display: inline-block; margin: 0 5px; width: 12px; height: 12px; border-radius: 50%; background-color: #ddd; outline: 0;}
+#testimonials .owl-dot.active{background: #50d8af;}
+
+/* call to action section css */
+#call-to-action{background: #081e5b; padding: 40px 0;}
+#call-to-action .cta-title{color: #fff; font-size: 28px; font-weight: 700;}
+#call-to-action .cta-text{color: #fff; }
+#call-to-action .cta-btn{font-family: "Montserrat"; font-weight: 700; font-size: 16px; letter-spacing: 1px; display: inline-block; padding: 8px 26px; border-radius: 3px; transition: all 0.4s; margin: 10px; border: 3px solid #fff; color: #fff;}
+#call-to-action .cta-btn:hover{background: #50d8af; border: 3px solid #50d8af;}
+
+/* our team section css */
+#team{background: #fff; padding: 30px 0;}
+#team .member{text-align: center; margin-bottom: 20px;}
+#team .member .pic{overflow: hidden;}
+#team .member .pic img{width: 100%;}
+
+#team .member .details{background: #50d8af; color: #fff; padding: 15px; border-radius: 0 0 3px 3px;}
+#team .member h4{font-weight: 700; margin-bottom: 2px; font-size: 18px;}
+#team .member span{font-style: italic; display: block; font-size: 13px;}
+#team .member .social a{color: #fff;}
+#team .member .social i{font-size: 16px; margin: 0 2px;}
+
+/* contact section css */
+
+#contact{padding: 40px 0;}
+#contact .contact-info{margin-bottom: 20px; text-align: center;}
+#contact .contact-info i{font-size: 48px; display: inline-block; margin: 10px; color: #50d8af;}
+#contact .contact-info h3{font-size: 18px; margin-bottom: 15px; font-weight: bold; text-transform: uppercase; color: #999;}
+#contact .contact-info p{margin-bottom: 0; color: #000;}
+
+#contact .contact-address,
+#contact .contact-phone,
+#contact .contact-email{margin-bottom: 20px;}
+
+#contact iframe{border: 0;}
+
+/* email form css */
+#contact .email-form input,
+#contact .email-form textarea{padding:10px 14px; border-radius: 0; box-shadow: none; 
+font-size: 15px;}
+
+#contact .email-form button[type="submit"]{background: #50d8af; border: 0; border-radius: 3px; padding: 10px 30px; color: #fff; transition: all 0.4s; cursor: pointer;}
+#contact .email-form button[type="submit"]:hover{background: #50d8af;}
+/* .form{margin-bottom: 100px;} */
