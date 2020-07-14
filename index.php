@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/7b3294b62f.js" crossorigin="anonymous"></script>
+    <title>OneTel</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+    <h4 style="position: fixed; color: white; z-index: 99; font-size: 50px;"></h4>
+    <div class="wrap">
+
+    <?php include "include/header.php" ?>
+
+
+        <section class="main_img">     
+           
+        </section>
+
+        <section class="site_info">
+            <div class="center">
+                <div class="boxes clear">
+                    <div class="box box1">
+                        <div>
+                            <div class="icon">
+                                <i class="fas fa-laptop"></i>
+                            </div>
+                            <h2>Responsive</h2>
+                            <p>What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting Lorem Ipsum is simply</p>
+                        </div>
+                    </div>
+                    <div class="box box2">
+                        <div>
+                            <div class="icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h2>Easy to Use</h2>
+                            <p>What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting Lorem Ipsum is simply</p>
+                        </div>
+                    </div>
+                    <div class="box box3">
+                        <div>
+                            <div class="icon">
+                                <i class="fas fa-life-ring"></i>
+                            </div>
+                            <h2>Quick Support</h2>
+                            <p>What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting Lorem Ipsum is simply</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!----end of site info---->
+
+        <section class="about" id="about">
+            <div class="center clear">
+                <div class="company start_up_left">
+
+                </div>
+
+                <div class="company start_up_right">
+                    <div class="about_txt">
+                        <h2>Startup Business</h2>
+                        <p>What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting Lorem Ipsum is simplyWhat is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting Lorem Ipsum is simply</p>
+
+                        <p>Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting Lorem Ipsum is simply</p>
+
+                        <a href="#">LEARN MORE</a>
+                    </div>
+                </div>            
+            </div>
+        </section><!----end of startup---->
+
+        <section class="portfolio" id="portfolio">
+            <div class="center">
+
+                <div class="title_box">
+                    <h2 class="title">Recent Project</h2>
+                    <p class="title_txt">What is Lorem Ipsum Lorem Ipsum is simply dummy<br> 
+                        text of the printing and typesetting Lorem Ipsum is simplyWhat</p>
+                </div>        
+
+                    <div class="port_con_box clear">
+                        <div class="port_con">
+                            <div>
+                                <span>
+                                    <img src="img/portfolio-img1.jpg" alt="portfolio1">
+                                </span>
+                                <div class="con_box_box">
+                                    <h3>Luby Web</h3>
+                                    <p>What is Lorem Ipsum Lorem Ipsum is simply dummy</p>
+                                    <a href="#">VIEW MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="port_con">
+                            <div>
+                                <span>
+                                    <img src="img/portfolio-img2.jpg" alt="portfolio1">
+                                </span>
+                                <div class="con_box_box">
+                                    <h3>Locla App</h3>
+                                    <p>What is Lorem Ipsum Lorem Ipsum is simply dummy</p>
+                                    <a href="#">VIEW MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="port_con">
+                            <div>
+                                <span>
+                                    <img src="img/portfolio-img3.jpg" alt="portfolio1">
+                                </span>
+                                <div class="con_box_box">
+                                    <h3>Creative Design</h3>
+                                    <p>What is Lorem Ipsum Lorem Ipsum is simply dummy</p>
+                                    <a href="#">VIEW MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="port_con">
+                            <div>
+                                <span>
+                                    <img src="img/portfolio-img4.jpg" alt="portfolio1">
+                                </span>
+                                <div class="con_box_box">
+                                    <h3>Cross Platform</h3>
+                                    <p>What is Lorem Ipsum Lorem Ipsum is simply dummy</p>
+                                    <a href="#">VIEW MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="port_con">
+                            <div>
+                                <span>
+                                    <img src="img/portfolio-img5.jpg" alt="portfolio1">
+                                </span>
+                                <div class="con_box_box">
+                                    <h3>ES6 Frienddly</h3>
+                                    <p>What is Lorem Ipsum Lorem Ipsum is simply dummy</p>
+                                    <a href="#">VIEW MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="port_con">
+                            <div>
+                                <span>
+                                    <img src="img/portfolio-img6.jpg" alt="portfolio1">
+                                </span>
+                                <div class="con_box_box">
+                                    <h3>Flutter Project</h3>
+                                    <p>What is Lorem Ipsum Lorem Ipsum is simply dummy</p>
+                                    <a href="#">VIEW MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        </section><!--end of portpolio-->
+        
+        <?php include "include/footer.php" ?>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+</body>
+</html>
