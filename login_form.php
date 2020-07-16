@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- main style -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/media.css">
+  
     <!-- log in page style -->
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/media.css">
   </head>
   <body>
     <div class="wrap">
@@ -25,7 +26,7 @@
         </div>
       </div>
 
-      <section class="login_section">
+      <section class="login_section sub_section">
         <!-- <div class="login_icon">
           <i class="fa fa-user" aria-hidden="true"></i>
         </div> -->

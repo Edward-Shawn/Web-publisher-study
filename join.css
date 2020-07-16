@@ -1,0 +1,39 @@
+.join_section{width:100%; height:auto; background:#101010; padding:50px 0 70px 0;}
+
+.join_box{width:40%; margin:auto; height:auto; border:1px solid #fff; box-sizing:border-box; padding:15px;}
+
+.join_box .input_box .col_con{display: block; border: 0; outline: 0; padding: 10px 0; float: left; border-radius: 0;}
+.join_box .input_box .col_con:nth-child(1){background: #c14000; width: 20%; padding: 8px 0; color: #fff; text-align: center;}
+.join_box .input_box .col_con:nth-child(2){background: #fff; width: 58%; margin-left: 2%; padding: 10px; box-sizing: border-box;}
+.join_box .input_box .col_con:nth-child(3){background: #009988; width: 18%; margin-left: 2%; color: #fff;}
+
+.join_box .name_box{margin-top: 10px;}
+.join_box .name_box .col_con{display: block; border: 0; outline: 0; padding: 10px 0; float: left; border-radius: 0;}
+.join_box .name_box .col_con:nth-child(1){background: #c14000; width: 20%; color: #fff; text-align: center; padding: 8px 0;}
+.join_box .name_box .col_con:nth-child(2){background: #fff; width: 78%; margin-left: 2%; padding: 10px; box-sizing: border-box;}
+
+
+.join_box .pass_box{margin-top: 10px;}
+.join_box .pass_box .col_con{display: block; border: 0; outline: 0; padding: 10px 0; float: left; border-radius: 0;}
+.join_box .pass_box .col_con:nth-child(1){background: #c14000; width: 20%; color: #fff; text-align: center; padding: 8px 0;}
+.join_box .pass_box .col_con:nth-child(2){background: #fff; width: 78%; margin-left: 2%; padding: 10px; box-sizing: border-box;}
+
+
+.join_box .pass_check_box{margin-top: 10px;}
+.join_box .pass_check_box .col_con{display: block; border: 0; outline: 0; padding: 10px 0; float: left; border-radius: 0;}
+.join_box .pass_check_box .col_con:nth-child(1){background: #c14000; width: 20%; padding: 8px 0; color: #fff; text-align: center;}
+.join_box .pass_check_box .col_con:nth-child(2){background: #fff; width: 58%; margin-left: 2%; padding: 10px; box-sizing: border-box;}
+.join_box .pass_check_box .col_con:nth-child(3){background: #009988; width: 18%; margin-left: 2%; color: #fff;}
+
+
+.join_box .email_box{margin-top: 10px; padding-bottom: 15px; border-bottom: 1px solid #fff;}
+.join_box .email_box .col_con{display: block; border: 0; outline: 0; padding: 10px 0; float: left; border-radius: 0;}
+.join_box .email_box .col_con:nth-child(1){background: #c14000; width: 20%; padding: 8px 0; color: #fff; text-align: center;}
+.join_box .email_box .col_con:nth-child(2){background: #fff; box-sizing: border-box; padding: 10px; width: 28%; margin-left: 2%;}
+.join_box .email_box .col_con:nth-child(3){color: #fff; width: 5%; margin-left: 2%;}
+.join_box .email_box .col_con:nth-child(4){width: 43%; box-sizing: border-box; padding: 10px;}
+
+.join_box .join_btns{width: 100%; height: auto; margin-top: 10px; padding-top: 5px;}
+.join_box .join_btns button{display: block; float: left; border: 0; outline: 0; border-radius: 0; text-align: center; color: #fff; width: 49%; box-sizing: border-box; padding: 15px 0;}
+.join_box .join_btns button:nth-child(1){background: #009988; }
+.join_box .join_btns button:nth-child(2){background: #d54ab6; float: right;}
