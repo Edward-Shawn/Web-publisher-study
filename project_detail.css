@@ -1,0 +1,33 @@
+.img_slogan h2, .img_slogan p {text-shadow: 1px 1px 3px #333;}
+
+.detail_section{width:100%; height:auto; background:#101010; padding:50px 0 70px 0;}
+.detail_section .sub_page_title{width: 25%;}
+.detail_section .detail_box{width: 100%; height: auto; padding: 30px 0 0 0;}
+.detail_section .detail_image{width: 50%; float: left; box-sizing: border-box; border: 1px solid #fff; padding: 10px;}
+.detail_section .detail_image img{width: 100%;}
+.detail_section .detail_contents{width: 45%; height: auto; float: right; box-sizing: border-box; padding: 10px; margin-left: 5%;}
+.detail_section .detail_contents>div{width: 100%; box-sizing: border-box; padding: 20px 0 20px 0px; border-bottom: 1px solid rgb(202, 202, 202);}
+
+/* detail page text style */
+.detail_contents h3,
+.detail_contents p{color: #fff;}
+
+.detail_section .detail_contents>div.detail_title{padding-top: 0;}
+.detail_section .detail_title h3{font-size: 25px;}
+
+.detail_section .text_left{float: left; width: 40%;}
+.detail_section .text_right{float: right; width: 60%;}
+
+.detail_section .detail_contents p{padding: 10px 0;}
+.detail_section .detail_contents .text_left p{font-weight: bold;}
+
+.detail_section .price_left{width: 40%; float: left;}
+.detail_section .price_right{width: 50%; float: right;}
+
+.detail_section .detail_contents .price_left p{ font-weight: bold;}
+.detail_section .detail_btns a{display: block; float: left; width: 32%; padding: 10px 0; text-align: center; color: #fff;}
+.detail_section .detail_btns a:nth-child(1){background: #c14000;}
+.detail_section .detail_btns a:nth-child(2){background: #ffa500; margin-left: 2%;}
+.detail_section .detail_btns a:nth-child(3){background: #009988; margin-left: 2%;}
+
+
