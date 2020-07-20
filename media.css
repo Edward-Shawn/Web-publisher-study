@@ -17,6 +17,18 @@
 
   .sub_page_title{width:40%;}
   .sub_page_title h2{font-size:30px;}
+
+  .logo_box{width: 40%;}
+
+  .title_box{padding: 50px 0;}
+  .title_box .title_txt{border: 0;}
+  .txt_contents{width: 100%; float: none; text-align: center;}
+  .view_more{width: 100%; float: none; text-align: center; padding: 40px 0 0 0;}
+
+  .detail_section .detail_image{width: 60%; margin: auto; float: none;}
+  .detail_section .detail_contents{width: 60%; margin: 30px auto 30px auto;  float: none;}
+
+  /* .contents_center{max-width: 1200px; height: auto; margin: auto;} */
 }
 
 @media screen and (max-width:950px){
@@ -48,7 +60,7 @@
   .about .company{width:100%;}
   .portfolio .port_con_box .port_con{width:50%;}
   .sub_page_title h2{font-size:25px;}
-
+  .content{width: 50%;}
   
 }
 
@@ -77,6 +89,10 @@
 
   .join_box{width:80%;}
   .login_box{width:80%;}
+
+  .detail_section .detail_image{width: 90%; margin: auto; float: none;}
+  .detail_section .detail_contents{width: 90%; margin: 30px auto 30px auto;  float: none;}
+  .content{width: 100%;}
 }
 
 @media screen and (max-width:420px){
@@ -90,6 +106,10 @@
   .join_box .email_box .col_con:nth-child(3){width:8%; margin-bottom:8px;}
   .join_box .email_box .col_con:nth-child(4){width:100%;}
 
+
+  .detail_section .detail_btns a:nth-child(1){background: #c14000; width: 48%;}
+  .detail_section .detail_btns a:nth-child(2){background: #ffa500; margin-left: 4%; width: 48%;}
+  .detail_section .detail_btns a:nth-child(3){background: #009988; margin-left: 0; width: 100%; margin-top: 10px;}
 
   
 }

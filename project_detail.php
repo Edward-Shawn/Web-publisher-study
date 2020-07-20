@@ -12,7 +12,7 @@
   <body>
     <div class="wrap">
 
-      <?php include "include/header.php" ?>
+      <?php include "include/sub_header.php" ?>
 
       <div class="sub_img">
             <img src="img/portfolio-img8.jpg" alt="">
@@ -27,16 +27,35 @@
 
     <section class="detail_section">
         <div class="center">
+
+            <?php
+
+            $num=$_GET["num"];
+            $con=mysqli_connect("localhost", "root", "", "onetel");
+            $sql="select * from project where num = $num";
+            $result=mysqli_query($con, $sql);
+
+            while($row=mysqli_fetch_array($result)){
+
+                $image=$row["image"];
+                $title=$row["title"];
+                $text=$row["text"];
+                $code=$row{"code"};
+                $lan=$row["lan"];
+                $price=$row["price"];
+
+            ?>
+
             <div class="sub_page_title">
-                <h2>Our Projects</h2>
+                <h2><?=$title?></h2>
             </div>
             <div class="detail_box clear">
                 <div class="detail_image">
-                    <img src="img/portfolio-img8.jpg" alt="">
+                    <img src="img/<?=$image?>" alt="">
                 </div>
                 <div class="detail_contents">
                     <div class = "detail_title">
-                        <h3>Vintage Furniture</h3>
+                        <h3><?=$title?></h3>
                     </div>
                     <div class="text_contents clear">
                         <div class="text_left">
@@ -45,9 +64,9 @@
                             <p>Project Info</p>
                         </div>
                         <div class = "text_right">
-                            <p>ICHI-21-OB</p>
-                            <P>HTML, CSS, javascript, PHP</P>
-                            <p>Code No 1 sum is simply dummy text of the printing and typesetting industry has been. the printing and typesetting</p>
+                            <p><?=$code?></p>
+                            <P><?=$lan?></P>
+                            <p><?=$text?></p>
                         </div>
                     </div>
                     <div class="price clear">
@@ -55,7 +74,7 @@
                             <P>Price</P>
                         </div>
                         <div class="price_right">
-                            <p>&#8361; 40,000,000</p>
+                            <p>&#8361;&nbsp;&nbsp;<?=$price?></p>
                             
                         </div>
                     </div>
@@ -66,6 +85,9 @@
                     </div>
                 </div>
             </div>
+            <?php
+             }
+            ?>
         </div>
     </section>
       

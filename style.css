@@ -9,6 +9,7 @@ body{font-family: 'Montserrat', sans-serif; font-weight:400;}
 /* layout reset style */
 .clear:after{display:block; content:''; clear:both;}
 .center{max-width:1200px; width:100%; margin:auto; height:auto;}
+.contents_center{max-width:1220px; _width: calc(100% + 20px); margin: auto; height: auto;}
 
 .wrap{width:100%; height:auto;}
 

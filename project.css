@@ -1,5 +1,8 @@
 .img_slogan h2, .img_slogan p {text-shadow: 1px 1px 3px #333;}
 
+body{height: 3000px;}
+
+
 /* project section style */
 
 .project_section{width:100%; height:auto; background:#101010; padding:50px 0 70px 0;}
@@ -19,3 +22,9 @@
 .content .con_txt_box a:hover{background:#fff; color:#101010;}
 
 .project_section .sub_page_title{width: 25%;}
+
+/* load more button style */
+
+.load_more{width: 100%; height: auto; background: #fff; text-align: center; margin-top: 20px;}
+.load_more button{display: inline-block; padding: 10px 0; outline: 0; width: 100%; color: #101010; transition: all 0.4s; border: 1px solid #fff; box-sizing: border-box;}
+.load_more:hover button{color: #fff; background: #101010;}
