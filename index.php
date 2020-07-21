@@ -66,94 +66,120 @@
       </section><!-- end of about -->
       <section class="portfolio" id="portfolio">
         <div class="center">
-          <div class="title_box">
-            <h2 class="title">Recent Project</h2>
-            <p class="title_txt">There are many variations of passages of Lorem Ipsum available, but the majority have suffered<br> alteration in some form, by injected humour</p>
+          <div class="title_box clear">
+            <div class="txt_contents">
+              <h2 class="title">Recent Project</h2>
+              <p class="title_txt">There are many variations of passages of Lorem Ipsum available, but the majority have suffered<br> alteration in some form, by injected humour</p>
+            </div>
+
+            <div class="view_more">
+               <a href="project.php">View More</a> 
+            </div>
           </div>
 
           <div class="port_con_box clear">
+
+            <?php
+                $con=mysqli_connect("localhost", "root", "", "onetel");
+                $sql="select * from project order by num desc limit 3";
+               $result = mysqli_query($con, $sql);
+
+               while($row = mysqli_fetch_array($result)){
+                 $num=$row["num"];
+                 $image=$row["image"];
+                 $title=$row["title"];
+                 $text=$row["text"];
+            ?>
+
             <div class="port_con">
               <div>
                 <span>
-                  <img src="img/portfolio-img1.jpg" alt="portfolio1">
+                  <img src="img/<?=$image?>" alt="portfolio1">
                 </span>
                 <div class="con_txt_box">
-                  <h3>Luby Web</h3>
-                  <p>Lorem Ipsum available, but the majority have suffered</p>
-                  <a href="#">VIEW MORE</a>
+                  <h3><?=$title?></h3>
+                  <p><?=$text?></p>
+                  <a href="project_detail.php?num=<?=$num?>">VIEW MORE</a>
                 </div>
               </div>
             </div>
-            <div class="port_con">
-              <div>
-                <span>
-                  <img src="img/portfolio-img2.jpg" alt="portfolio2">
-                </span>
-                <div class="con_txt_box">
-                  <h3>Local App</h3>
-                  <p>Lorem Ipsum available, but the majority have suffered</p>
-                  <a href="#">VIEW MORE</a>
-                </div>
-              </div>
-            </div>
-            <div class="port_con">
-              <div>
-                <span>
-                  <img src="img/portfolio-img3.jpg" alt="portfolio3">
-                </span>
-                <div class="con_txt_box">
-                  <h3>Creative Design</h3>
-                  <p>Lorem Ipsum available, but the majority have suffered</p>
-                  <a href="#">VIEW MORE</a>
-                </div>
-              </div>
-            </div>
-            <div class="port_con">
-              <div>
-                <span>
-                  <img src="img/portfolio-img4.jpg" alt="portfolio4">
-                </span>
-                <div class="con_txt_box">
-                  <h3>Cross Platform</h3>
-                  <p>Lorem Ipsum available, but the majority have suffered</p>
-                  <a href="#">VIEW MORE</a>
-                </div>
-              </div>
-            </div>
-            <div class="port_con">
-              <div>
-                <span>
-                  <img src="img/portfolio-img5.jpg" alt="portfolio5">
-                </span>
-                <div class="con_txt_box">
-                  <h3>ES6 Friendly</h3>
-                  <p>Lorem Ipsum available, but the majority have suffered</p>
-                  <a href="#">VIEW MORE</a>
-                </div>
-              </div>
-            </div>
-            <div class="port_con">
-              <div>
-                <span>
-                  <img src="img/portfolio-img6.jpg" alt="portfolio6">
-                </span>
-                <div class="con_txt_box">
-                  <h3>Flutter Project</h3>
-                  <p>Lorem Ipsum available, but the majority have suffered</p>
-                  <a href="#">VIEW MORE</a>
-                </div>
-              </div>
-            </div>
-          </div>
+          
+          <?php
+            }
+          ?>
+          </div><!--end of port_con_box -->
+
         </div>
       </section><!-- end of portpolio -->
       
+      <section class="contact" id="contact">
+            <div class="contents_center">
+
+              <div class="title_box clear">
+                <div class="txt_contents">
+                  <h2 class="title">Contact Us</h2>
+                  <p class="title_txt">There are many variations of passages of Lorem Ipsum available, but the majority have suffered<br> alteration in some form, by injected humour</p>
+                </div>
+
+                <div class="view_more">
+                  <a href="project.php">Go To Community</a> 
+                </div>
+
+
+                
+              </div><!-- end of title box-->
+
+              <div class="map_box">
+                  <div class="map">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d99236.245296795!2d114.06169773009266!3d22.43320216874211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3403e2eda332980f%3A0xf08ab3badbeac97c!2sHong%20Kong!5e0!3m2!1sen!2skr!4v1595295839645!5m2!1sen!2skr" width="100%" height="300" ></iframe>
+                  </div>
+              </div>
+                <div class="msg_box">
+                    <form action="php/msg_insert.php" method="post" name="msg_form">
+                      <p class="msg_name">
+                        <input type="text" placeholder="Your Name" name="msg_name">
+                      </p>
+                      <p class="msg_email">
+                        <input type="text" placeholder="Your Email" name="msg_email">
+                      </p>
+                      <p class="message">
+                        <textarea placeholder="Write Your Messages" name="message"></textarea>
+                      </p>
+                      <button type="button" onclick="check_input()">SUBMINT</button>
+                      <button type="button"><a href="abc.php">Go To Community</a></button>
+                    </form>
+                </div>
+            </div>
+      </section>
+
       <?php include "include/footer.php" ?>
 
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
+    <script>
+        function check_input(){
+          if(!document.msg_form.msg_name.value){
+            alert("이름을 입력해 주세요.");
+            document.msg_form.msg_name.focus();
+            return;
+          }
+          if(!document.msg_form.msg_email.value){
+            alert("이메일을 입력해 주세요.");
+            document.msg_form.msg_email.focus();
+            return;
+          }
+          if(!document.msg_form.message.value){
+            alert("이메일을 입력해 주세요.");
+            document.msg_form.message.focus();
+            return;
+          }
+
+          document.msg_form.submit();
+        }
+   
+    </script>
   </body>
 </html>
 

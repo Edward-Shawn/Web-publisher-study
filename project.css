@@ -28,3 +28,4 @@ body{height: 3000px;}
 .load_more{width: 100%; height: auto; background: #fff; text-align: center; margin-top: 20px;}
 .load_more button{display: inline-block; padding: 10px 0; outline: 0; width: 100%; color: #101010; transition: all 0.4s; border: 1px solid #fff; box-sizing: border-box;}
 .load_more:hover button{color: #fff; background: #101010;}
+.load_more .fold{display: none;}
