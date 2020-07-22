@@ -40,6 +40,10 @@ $(document).ready(function () {
                 }
             });
         });
+
+    
+
+
     }
     activateMenu(); //함수호출
 
@@ -63,6 +67,7 @@ $(document).ready(function () {
         $("html,body").stop().animate({scrollTop:offsetTop - headHeight},500);
     });
     
+
 
 
     $("#header").sticky({
