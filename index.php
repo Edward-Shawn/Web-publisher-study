@@ -111,6 +111,66 @@
 
         </div>
       </section><!-- end of portpolio -->
+
+      <section class="gallery" id="gallery">
+            <div class="center">
+              <div class="title_box clear">
+
+                  <div class="txt_contents">
+                    <h2 class="title">Gallery</h2>
+                    <p class="title_txt">There are many variations of passages of Lorem Ipsum available, but the majority have suffered<br> alteration in some form, by injected humour</p>
+                  </div>
+
+                  <div class="view_more">
+                    <a href="project.php">View More</a> 
+                  </div>
+              </div><!-- end of title box-->
+
+              <div class="gallery_contents clear">
+                  <div class="gallery_view">
+                    <div>
+                      <img src="img/large-1-1.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="gallery_view">
+                    <div>
+                      <img src="img/large-1-2.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="gallery_view">
+                    <div>
+                      <img src="img/large-1-3.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="gallery_view">
+                    <div>
+                      <img src="img/large-1-4.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="gallery_view">
+                    <div>
+                      <img src="img/large-1-5.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="gallery_view">
+                    <div>
+                      <img src="img/large-1-6.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="gallery_view">
+                    <div>
+                      <img src="img/large-1-7.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="gallery_view">
+                    <div>
+                      <img src="img/large-1-8.jpg" alt="">
+                    </div>
+                  </div>
+              </div>
+            </div>
+      </section>
+
       
       <section class="contact" id="contact">
             <div class="contents_center">

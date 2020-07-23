@@ -1,0 +1,26 @@
+/* gallery style */
+
+
+
+.gallery_section{width:100%; height:auto; background:#101010; padding:50px 0 70px 0;}
+
+.grid-sizer, 
+.gallery_item{width: 20%;}
+.gallery_item{box-sizing: border-box; padding: 5px;}
+
+.gallery_item>img{width: 100%;}
+
+.gallery_item>span{position: absolute; display: block; width: 100%; height: 100%; left: 0; top: 0; background: rgba(0, 0, 0, 0); text-align: center; transition: all 0.4s;}
+.gallery_item>span>a{font-size: 35px; color: #ddd; padding: 10px 21px; border: 2px solid #ddd; border-radius: 50%; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); transition: all 0.4s; opacity: 0;}
+.gallery_item>span:hover{background: rgba(0, 0, 0, 0.7);}
+.gallery_item>span:hover>a{opacity: 1;}
+.gallery_item>span>a:hover{color: #fff; border: 1px solid #fff;}
+
+.filtering{width: 100%; height: auto; text-align: center; padding: 40px 0;}
+
+.filtering button{display: inline-block; width: 150px; border: 1px solid #fff; box-sizing: border-box; padding: 10px 0; color: #fff; background: #000; transition: all 0.4s; cursor: pointer;}
+
+.filtering button:hover{color: #101010; background: #fff;}
+.filtering button.on{color: #101010; background: #fff;}
+.gallery_btns{width: 100%; height: auto; text-align: center;}
+.gallery_btns button{background: #d54ab6; color: #fff; padding: 10px 20px; border: 0;}
