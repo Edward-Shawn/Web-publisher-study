@@ -24,3 +24,21 @@
 .filtering button.on{color: #101010; background: #fff;}
 .gallery_btns{width: 100%; height: auto; text-align: center;}
 .gallery_btns button{background: #d54ab6; color: #fff; padding: 10px 20px; border: 0;}
+.gallery_btns button a{color: #fff;}
+
+.upload_section{width:100%; height:auto; background:#101010; padding:50px 0 70px 0;}
+.form_data{width: 100%; max-width: 800px; margin:20px auto 0; height: auto; box-sizing: border-box; padding: 20px; border: 1px solid #fff;}
+
+.upload_title{width: 100%; height: auto;}
+.upload_title label{width: 19%; float: left; color: #fff; background: #d54ab6; display: block; text-align: center; height: 35px; padding-top: 10px; box-sizing: border-box;}
+.upload_title input{width: 80%; box-sizing: border-box; padding: 10px; float: right; background: #999; border: 0; outline: 0; height: 35px;}
+.upload_title input:focus{background: #fff;}
+
+.upload_category{width: 100%; height: auto; margin: 10px 0;}
+
+.upload_category em{width: 19%; float: left; color: #fff; background: #d54ab6; display: block; text-align: center; height: 35px; padding-top: 10px; box-sizing: border-box; font-style: normal;}
+.upload_category select{width: 80%; height: 35px; float: right; outline: 0; background: #999; border: 0; border-radius: 0; color: #fff; box-sizing: border-box; padding: 10px; }
+.upload_category select option{padding: 10px 0;}
+
+.upload_left{float: left; width: 50%; }
+.upload_right{float: right; width: 50%;}

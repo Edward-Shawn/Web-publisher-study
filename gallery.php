@@ -38,11 +38,11 @@
 
             <div class="filtering">
                 <button type="button" class="on" data-filter="*" >All</button>
-                <button type="button" data-filter=".people" >People</button>
-                <button type="button" data-filter=".animals" >Animals</button>
-                <button type="button" data-filter=".nature" >Nature</button>
-                <button type="button" data-filter=".plantes" >Plantes</button>
-                <button type="button" data-filter=".architects" >Architects</button>
+                <button type="button" data-filter="people" >People</button>
+                <button type="button" data-filter="animals" >Animals</button>
+                <button type="button" data-filter="nature" >Nature</button>
+                <button type="button" data-filter="plantes" >Plantes</button>
+                <button type="button" data-filter="architects" >Architects</button>
             </div>
 
             <div class="gallery_box">
@@ -52,7 +52,7 @@
 
             <div class="gallery_btns">
                 <button type="button" id="load_more">Load More</button>
-                <button type="button">Upload Image</button>
+                <button type="button"><a href="upload_gallery.php">Upload Image</a></button>
             </div>
         </div> <!-- end of center tag-->
 
@@ -69,7 +69,7 @@
     <!-- libraries -->
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <!-- <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script> -->
     
     <!-- main jquery files -->
     <script type="text/javascript" src="js/custom.js"></script>
