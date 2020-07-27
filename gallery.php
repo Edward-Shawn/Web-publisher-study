@@ -75,6 +75,5 @@
     <script type="text/javascript" src="js/custom.js"></script>
     <script type="text/javascript" src="js/gallery.js"></script>
     <script src="js/venobox.min.js"></script>
-
   </body>
 </html>

@@ -27,12 +27,14 @@
 .gallery_btns button a{color: #fff;}
 
 .upload_section{width:100%; height:auto; background:#101010; padding:50px 0 70px 0;}
-.form_data{width: 100%; max-width: 800px; margin:20px auto 0; height: auto; box-sizing: border-box; padding: 20px; border: 1px solid #fff;}
+.form_data{width: 100%; max-width: 800px; margin:20px auto 0; height: auto; box-sizing: border-box; padding: 20px 20px 0 20px; border: 1px solid #fff;}
 
 .upload_title{width: 100%; height: auto;}
 .upload_title label{width: 19%; float: left; color: #fff; background: #d54ab6; display: block; text-align: center; height: 35px; padding-top: 10px; box-sizing: border-box;}
 .upload_title input{width: 80%; box-sizing: border-box; padding: 10px; float: right; background: #999; border: 0; outline: 0; height: 35px;}
 .upload_title input:focus{background: #fff;}
+.upload_title ::placeholder {color: #fff;}
+
 
 .upload_category{width: 100%; height: auto; margin: 10px 0;}
 
@@ -40,5 +42,20 @@
 .upload_category select{width: 80%; height: 35px; float: right; outline: 0; background: #999; border: 0; border-radius: 0; color: #fff; box-sizing: border-box; padding: 10px; }
 .upload_category select option{padding: 10px 0;}
 
-.upload_left{float: left; width: 50%; }
-.upload_right{float: right; width: 50%;}
+.upload_left{float: left; width: 50%; position: relative; box-sizing: border-box; padding:0 5px 0 0;}
+.upload_right{float: right; width: 50%; position: relative; box-sizing: border-box; padding:0 0 0 5px;}
+
+.image_box{text-align: center;}
+.image_box input[type="file"]{position: absolute; width: 1px; height: 1px; padding: 0; margin: -1; overflow: hidden; border: 0;}
+
+
+.image_box label{display: block; width: 100%; height: auto; padding: 10px 0; text-align: center; box-sizing: border-box; border: 1px solid #fff; color: #fff;}
+
+.image_box .upload_name{display: block; box-sizing: border-box; padding: 10px; width: 100%; background: #999; border: 1px solid #fff; margin-bottom: 10px;}
+.image_box .upload_name:focus{background: #fff;}
+
+
+.wrap_box{width: 100%; height: auto; padding: 5px; border: 1px solid #fff; box-sizing: border-box; overflow: hidden; margin-top: 10px;}
+.wrap_box img{width: 100%;}
+.upload_btn{width: 100%; height: auto; padding: 10px 0; text-align: center;}
+.upload_btn button{color: #fff; border: 1px solid #fff; padding: 10px 15px; outline: 0; background: #101010;}

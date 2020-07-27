@@ -107,5 +107,9 @@ $(document).ready(function () {
     //   console.log(bottom);
     //   $("html,body").animate({ scrollTop: bottom }, 300);
     // })
-  
+    
+
+
+
+
   });
