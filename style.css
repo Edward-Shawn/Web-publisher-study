@@ -69,7 +69,7 @@ header .gnb li:hover, header .gnb li.active{background:#555;}
 .site_info .boxes .box h2{font-size:35px; color:#fff; margin:25px 0;}
 .site_info .boxes .box p{color:#fff; line-height:1.6;}
 
-.site_info .boxes .box1>div{background:#c14000;}
+.site_info .boxes .box1>div{background:red;}
 .site_info .boxes .box2>div{background:#009988;}
 .site_info .boxes .box3>div{background:#ffa500;}
 
