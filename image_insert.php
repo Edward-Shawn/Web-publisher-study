@@ -43,6 +43,25 @@
     $sql="insert into gallery_items(title, category, thumb_img, large_img) values('$title', '$select','$thumb_name','$large_name')";
     mysqli_query($con,$sql);
 
+    $sql="select * from gallery_items order by num desc";
+    $result = mysqli_query($con,$sql);
+
+    $res = array();
+
+    while($row=mysqli_fetch_array($result)){
+        array_push($res, array(
+            'title'=>$row['title'],
+            'category'=>$row['category'],
+            'thumb'=>$row['thumb_img'],
+            'large'=>$row['large_img']
+        ));
+    }
+
+    //json 파일 생성 및 데이터 json 인코딩
+    file_put_contents("../data/images.json", json_encode($res, JSON_PRETTY_PRINT));
+
+    mysqli_close($con)
+
 ?>
 
 

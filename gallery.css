@@ -16,9 +16,9 @@
 .gallery_item>span:hover>a{opacity: 1;}
 .gallery_item>span>a:hover{color: #fff; border: 1px solid #fff;}
 
-.filtering{width: 100%; height: auto; text-align: center; padding: 40px 0;}
+.filtering{width: 100%; height: auto; text-align: center; padding: 40px 0px; }
 
-.filtering button{display: inline-block; width: 150px; border: 1px solid #fff; box-sizing: border-box; padding: 10px 0; color: #fff; background: #000; transition: all 0.4s; cursor: pointer;}
+.filtering button{display: inline-block; width: 150px; border: 1px solid #fff; box-sizing: border-box; padding: 10px 0; color: #fff; background: #000; transition: all 0.4s; cursor: pointer; margin-bottom: 5px;}
 
 .filtering button:hover{color: #101010; background: #fff;}
 .filtering button.on{color: #101010; background: #fff;}

@@ -14,7 +14,7 @@ $(document).ready(function () {
       percentPosition: true
     })
   
-    $.getJSON("/onetel/data/content.json", initGallery);
+    $.getJSON("/onetel/data/images.json", initGallery);
   
     function initGallery(data) {
   
@@ -34,9 +34,9 @@ $(document).ready(function () {
         var itemHTML =
   
           '<div class="gallery_item ' + item.category + '">' +
-          '<img src="' + item.images.thumb + '" alt="">' +
+          '<img src="img/gallery/' + item.thumb + '" alt="'+item.title+'">' +
           '<span>' +
-          '<a href="' + item.images.large + '" class="venobox" data-gall="myGallery">' + '+' + '</a>' +
+          '<a href="img/gallery/' + item.large + '" class="venobox" data-gall="myGallery">' + '+' + '</a>' +
           '</span>' +
           '</div>';
         items.push($(itemHTML).get(0));

@@ -29,7 +29,7 @@
                 <p>Your Passinate and Creative Idea.</p>
             </div>
       </div>
-      <section class="gallery_section">
+      <section class="gallery_section sub_section">
 
         <div class="center">
             <div class="sub_page_title">
@@ -37,7 +37,7 @@
             </div>
 
             <div class="filtering">
-                <button type="button" class="on" data-filter="*" >All</button>
+                <button type="button" class="on" data-filter="all" >All</button>
                 <button type="button" data-filter="people" >People</button>
                 <button type="button" data-filter="animals" >Animals</button>
                 <button type="button" data-filter="nature" >Nature</button>
