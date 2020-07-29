@@ -39,7 +39,7 @@
     }
 
 
-    $con = mysqli_connect("localhost", "root", "", "onetel");
+    $con = mysqli_connect("localhost", "sbh3834", "qudgus110!", "sbh3834");
     $sql="insert into gallery_items(title, category, thumb_img, large_img) values('$title', '$select','$thumb_name','$large_name')";
     mysqli_query($con,$sql);
 

@@ -29,7 +29,7 @@ if($image_name && !$image_error){
     $image_name='';
 }
 
-$con=mysqli_connect("localhost", "root", "", "onetel");
+$con = mysqli_connect("localhost", "sbh3834", "qudgus110!", "sbh3834");
 $sql="insert into project (image, title, text, code, lan, price)
 values('$image_name','$title','$desc','$code','$lan','$price')";
 mysqli_query($con, $sql);

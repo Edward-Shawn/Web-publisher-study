@@ -6,7 +6,7 @@
 
     $msg=htmlspecialchars($msg, ENT_QUOTES);
 
-    $con=mysqli_connect("localhost", "root", "", "onetel");
+    $con = mysqli_connect("localhost", "sbh3834", "qudgus110!", "sbh3834");
     $sql="insert into msg_table(name, email, message) values('$name', '$email', '$msg')";
     mysqli_query($con, $sql);
     mysqli_close($con);

@@ -10,7 +10,7 @@
             </script>
         ";
     }else{
-        $con = mysqli_connect("localhost", "root", "", "onetel");
+        $con = mysqli_connect("localhost", "sbh3834", "qudgus110!", "sbh3834");
         $sql="select * from members1 where id='$id'";
         $result=mysqli_query($con,$sql);
         $num_record=mysqli_num_rows($result);
@@ -20,7 +20,7 @@
         }else{
             echo $id."는(은) 사용 가능한 아이디 입니다.";
         }
-
+        mysqli_query($con)
         mysqli_close($con);
     }
 ?>

@@ -11,7 +11,7 @@
     $level = 9;
     $point = 0;
 
-    $con = mysqli_connect("localhost", "root", "", "onetel");
+    $con = mysqli_connect("localhost", "sbh3834", "qudgus110!", "sbh3834");
     $sql = "insert into members1(id, name, pass, email, regist_day, level, point) values('$id','$name','$pass','$email','$regist_day','$level','$point')";
 
 
