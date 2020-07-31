@@ -21,19 +21,17 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $.getJSON("/onetel/data/write_contents.json", function(data){
+                var items = [];
+                $.each(data, function (i, item) {
+                    var inHTML = "<p>" + item.id + "</p>";
+                    items.push($(inHTML).get(0));
+                });
+                $(".json").append(items);
+        });
+    </script>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- --- -->

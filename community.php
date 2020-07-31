@@ -32,31 +32,34 @@
 
                 <div class="board_table">
                     <ul class="board_list" id="board_list">
-                        <li class="board_title clear">
-                            <span class="num">번호</span>
-                            <span class="tit">제목</span>
-                            <span class="id">아이디</span>
-                            <span class="hit">조회수</span>
-                        </li>
-                        <li class="board_contents clear">
-                            <span class="num">1</span>
-                            <span class="tit">첫 게시글 입니다.</span>
-                            <span class="id">Shawn</span>
-                            <span class="hit">12</span>
-                        </li>
-                        <li class="board_contents clear">
-                            <span class="num">2</span>
-                            <span class="tit">두번째 게시글 입니다.</span>
-                            <span class="id">Shawn</span>
-                            <span class="hit">22</span>
-                        </li>
-                        <li class="board_contents clear">
-                            <span class="num">3</span>
-                            <span class="tit">세번째 게시글 입니다.</span>
-                            <span class="id">Shawn</span>
-                            <span class="hit">32</span>
-                        </li>
+                       
                     </ul>
+                    <div class="numbering">
+                        <span onclick="firstPage()"><i class="fa fa-angle-double-left" aria-hidden="true"></i></span>
+                        <span onclick="goToPrev()"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
+                        <?php
+                            $con = mysqli_connect("localhost", "sbh3834", "qudgus110!", "sbh3834");
+                            $sql="select * from community_board order by num desc";
+                            $result = mysqli_query($con,$sql);
+                            $total_record = mysqli_num_rows($result);
+                            $scale = 6;
+
+                            if($total_record % $scale == 0){
+                                $total_page = floor($total_record/$scale);
+                            }else{
+                                $total_page = floor($total_record/$scale) + 1;
+                            }
+
+
+                            for($i = 1; $i <= $total_page; $i++){
+                        ?>
+                            <span  class="page_number" onclick="get_page(<?=$i?>)"><?=$i?></span>
+                        <?php
+                            } 
+                        ?>
+                        <span onclick="goToNext()"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                        <span onclick="lastPage()"><i class="fa fa-angle-double-right" aria-hidden="true"></i></span>
+                    </div>
                     <a href="write_form.php">글쓰기</a>
                 </div> <!--end of board table tag-->
             </div>
@@ -69,6 +72,60 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
+    <script>
+        var currentPage = 1;
+
+        var url = "data/board_list_ajax.php";
+        $.get(url, {
+            page:1
+        },function(args){
+            $("#board_list").html(args);
+        });
+
+        function get_page(no){
+            // alert(currentPage);
+            var url = "data/board_list_ajax.php";
+            $.get(url, {
+                page: no
+            },function(args){
+                $("#board_list").html(args);
+                currentPage = no;
+            });
+        }
+
+        function goToNext(){
+            var pageNumber = $(".page_number").length;
+            // alert(pageNumber)
+            if(currentPage === pageNumber){
+                get_page(pageNumber);
+            }else{
+                get_page(currentPage + 1);
+            }
+        }
+
+
+        function goToPrev(){
+            if(currentPage === 1){
+                get_page(1);
+            }else{
+                get_page(currentPage - 1);
+            }
+        }
+
+
+        function firstPage(){
+            get_page(1);
+        }
+        
+
+        function lastPage(){
+            var pageNumber = $(".page_number").length;
+            get_page(pageNumber);
+        }
+        
+
+        
+    </script>
 </body>
 
 </html>
