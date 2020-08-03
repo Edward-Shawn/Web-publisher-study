@@ -53,14 +53,40 @@
 
                             for($i = 1; $i <= $total_page; $i++){
                         ?>
-                            <span  class="page_number" onclick="get_page(<?=$i?>)"><?=$i?></span>
+                            <span  class="page_number on" onclick="get_page(<?=$i?>)"><?=$i?></span>
                         <?php
                             } 
                         ?>
                         <span onclick="goToNext()"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
                         <span onclick="lastPage()"><i class="fa fa-angle-double-right" aria-hidden="true"></i></span>
                     </div>
-                    <a href="write_form.php">글쓰기</a>
+
+                    <div class="community_btn clear">
+
+                            
+                        <form class="search_box" method="post" name="search_box" action="search_result.php">
+                            <select name="search_select" id="">
+                                <option value="id">아이디</option>
+                                <option value="id">제목</option>
+                            </select>
+                            <input type="text" class="search_input" name="search_input" placeholder="검색어를 입력해 주세요.">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+
+
+                        <?php
+                            if(!$userid){
+                        ?>
+                            <a href="#" onclick="javascript:alert('로그인이 필요합니다.')" class="board_btn">글쓰기</a>  
+                        <?php  
+                            } else{
+                        ?>
+                        <a href="write_form.php" class="board_btn">글쓰기</a>
+                        <?php  
+                            }
+                        ?>
+                    </div>
+
                 </div> <!--end of board table tag-->
             </div>
         </section>
@@ -85,6 +111,8 @@
         function get_page(no){
             // alert(currentPage);
             var url = "data/board_list_ajax.php";
+            $(".page_number").removeClass("on");
+            $(".page_number").eq(no -1 ).addClass("on");
             $.get(url, {
                 page: no
             },function(args){
@@ -123,8 +151,8 @@
             get_page(pageNumber);
         }
         
-
         
+        $(".page_number").eq(0).trigger("click");
     </script>
 </body>
 

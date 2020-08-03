@@ -1,20 +1,40 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
-<head>
+  <head>
     <meta charset="utf-8">
-    <title>OneTel</title>
+    <title>board_view</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/community.css">
     <link rel="stylesheet" href="css/media.css">
-</head>
 
-<body>
+  </head>
+  <body>
     <div class="wrap">
 
-        <?php include "include/sub_header.php"?>
+      <?php include "include/sub_header.php"?>
+      
+      <?php
+        $num = $_GET["num"];
+
+        $con = mysqli_connect("localhost", "sbh3834", "qudgus110!", "sbh3834");
+        $sql="select * from community_board where num=$num";
+        $result=mysqli_query($con, $sql);
+        $row=mysqli_fetch_array($result);
+
+        $id=$row["id"];
+        $title=$row["title"];
+        $content=$row["content"];
+        $hits=$row["hits"];
+
+        $content=str_replace("", "&nbsp", $content);
+        $content=str_replace("\n", "</br>", $content);
+
+        $new_hit = $hits + 1;
+        $sql = "update community_board set hits=$new_hit where num=$num";
+        mysqli_query($con, $sql);
+        ?>
 
         <div class="sub_img">
             <img src="img/community_img.jpg" alt="">
@@ -23,7 +43,7 @@
                 <p>Your Valuable Opinions.</p>
             </div>
         </div>
-
+      
         <section class="community_section padding_fit">
             <div class="contents_center">
                 <div class="sub_page_title">
@@ -36,37 +56,34 @@
                         <form action="php/write_insert.php" method="post" name="write_form">
                             <p class="clear">
                                 <label for="id">아이디</label>
-                                <input type="text" id="id" value="<?=$userid?>" name="id">
+                                <input type="text" id="id" value="<?=$id?>" name="id" readonly>
                             </p>
                             <p class="clear">
                                 <label for="title">제목</label>
-                                <input type="text" id="title" placeholder="제목을 입력해 주세요." name="title">
+                                <input type="text" id="title" name="title" value="<?=$title?> [조회:<?=$new_hit?>]" readonly>
                             </p>
                             <p class="clear">
-                                <textarea name="content" id="contents" placeholder="내용을 입력해 주세요."></textarea>
+              
+                                <em class="view_content"><?=$content?></em>
+
                             </p>
                         </form>
                     </div>
                     <div class="write_btn clear">
                         <a href="community.php" class="board_btn">돌아가기</a>
-                        <a href="#" onclick="check_input()" class="board_btn">제출하기</a>
+                        <a href="#" onclick="check_input()" class="board_btn">답글달기</a>
                     </div>
                 </div> <!--end of board table tag-->
             </div>
         </section>
-
-
-        <?php include "include/footer.php" ?>
+      
+      
+      <?php include "include/footer.php"?>
 
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
-    <script>
-        function check_input(){
-            document.write_form.submit();
-        }
-    </script>
-</body>
 
+  </body>
 </html>
