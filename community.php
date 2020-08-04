@@ -67,7 +67,7 @@
                         <form class="search_box" method="post" name="search_box" action="search_result.php">
                             <select name="search_select" id="">
                                 <option value="id">아이디</option>
-                                <option value="id">제목</option>
+                                <option value="title">제목</option>
                             </select>
                             <input type="text" class="search_input" name="search_input" placeholder="검색어를 입력해 주세요.">
                             <button type="submit"><i class="fa fa-search"></i></button>
