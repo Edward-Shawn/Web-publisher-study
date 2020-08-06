@@ -1,0 +1,4 @@
+.admin_box{width: 100%; height: auto; padding: 150px 0;}
+.admin_box .tab_box{width: 60%; height: auto; margin: auto; text-align: center;}
+.admin_box .tab_box button{display: inline-block; padding: 15px 40px; background: #fff; color: #101010; font-size: 16px; font-weight: 500; box-sizing: border-box; border: 1px solid #101010;}
+.admin_box .tab_box button.on{background: #101010; color: #fff;}

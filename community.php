@@ -5,10 +5,12 @@
     <meta charset="utf-8">
     <title>OneTel</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/media.css">
+    
     <link rel="stylesheet" href="css/community.css">
+    <link rel="stylesheet" href="css/media.css">
 </head>
 
 <body>
@@ -24,7 +26,7 @@
             </div>
         </div>
 
-        <section class="community_section">
+        <section class="community_section sub_section">
             <div class="contents_center">
                 <div class="sub_page_title">
                     <h2>community</h2>
@@ -50,7 +52,6 @@
                                 $total_page = floor($total_record/$scale) + 1;
                             }
 
-
                             for($i = 1; $i <= $total_page; $i++){
                         ?>
                             <span  class="page_number on" onclick="get_page(<?=$i?>)"><?=$i?></span>
@@ -70,7 +71,16 @@
                                 <option value="title">제목</option>
                             </select>
                             <input type="text" class="search_input" name="search_input" placeholder="검색어를 입력해 주세요.">
-                            <button type="submit"><i class="fa fa-search"></i></button>
+                            <button type="button" onclick="check_input()"><i class="fa fa-search"></i></button>
+                            <script>
+                                function check_input(){
+                                    if(!document.search_box.search_input.value){
+                                        alert("검색어를 입력해 주세요.");
+                                        return;
+                                    }
+                                    document.search_box.submit();
+                                }
+                            </script>
                         </form>
 
 
