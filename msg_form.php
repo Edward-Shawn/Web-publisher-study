@@ -15,7 +15,7 @@
 
       <section class="meg_check">
         <?php
-            $con=mysqli_connect("localhost", "root", "", "onetel");
+            $con = mysqli_connect("localhost", "sbh3834", "qudgus110!", "sbh3834");
             $sql="select * from msg_table order by num desc";
             $result=mysqli_query($con, $sql);
             while($row=mysqli_fetch_array($result)){
@@ -23,6 +23,8 @@
                 $name=$row["name"];
                 $email=$row["email"];
                 $msg=$row["message"];
+                $regist_day=$row["reagist_day"]
+
         ?>
 
           <div class="msg_check_box">
@@ -30,6 +32,8 @@
             <p>이름 : <?=$name?></p>
             <p>이메일 : <?=$email?></p>
             <p>메시지 : <?=$msg?></p>
+            <p>메시지 : <?=$regist_day?></p>
+
           </div>
 
 
